@@ -38,8 +38,12 @@ After a reboot, kali will now
 
 # Airodump  
 We have used a automation script from Github to run airodump and airo crack  
-Step 1: Run the command python automation.py  
-A menu will be displayed.
+Step 1: Run the command ```python automation.py```  
+A menu will be displayed.  
+![image](https://user-images.githubusercontent.com/97077110/148013026-14b6dc58-f439-4c0d-bbac-b0a5d0d253ae.png)
+Step 2: Download any tools that is required 
+Run the command python automation.py -i
+
 
 
 
