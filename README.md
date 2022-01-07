@@ -366,20 +366,20 @@ Nmap is best used in specific situations to prevent triggering a target's defens
 Using of Nmap:
 Nmap can be used to scan local networks.There are many commands that we can use to tune our scan.
 
-nmap 172.168.1.0/24: This scans the entire class C range   
-nmap -p : This scans specific ports   
-nmap -sP 172.168.1.0/24: This scans the network/find servers and devices that are running   
-nmap –iflist: This shows host interfaces and routes   
-nmap –sV 172.168.1.1: This detects remote services' version numbers   
-nmap –sS 172.168.1.1: This performs a stealthy TCP SYN scan   
-nmap –sO 172.168.1.1: This scans for the IP protocol   
-nmap -172.168.1.1 > output.txt: This saves the output from the scan to the text file   
-nmap –sA 172.168.1.254: This checks whether the host is protected by a firewall  
-nmap –PN 172.168.1.1: This scans the host when it is protected by a firewall  
-nmap –F 172.168.1.1: This perform a fast scan l  
-nmap --reason 172.168.1.1: This displays the reason a port is in a particular state   
-nmap --open 172.168.1.1: This only shows open or possibly open ports  
-nmap –O 172.168.1.1: This scan shows the operating system   
+```nmap 172.168.1.0/24```: This scans the entire class C range   
+```nmap -p ```: This scans specific ports   
+```nmap -sP 172.168.1.0/24```: This scans the network/find servers and devices that are running   
+```nmap –iflist```: This shows host interfaces and routes   
+```nmap –sV 172.168.1.1```: This detects remote services' version numbers   
+```nmap –sS 172.168.1.1```: This performs a stealthy TCP SYN scan   
+```nmap –sO 172.168.1.1```: This scans for the IP protocol   
+```nmap -172.168.1.1 > output.txt```: This saves the output from the scan to the text file   
+```nmap –sA 172.168.1.254```: This checks whether the host is protected by a firewall  
+```nmap –PN 172.168.1.1```: This scans the host when it is protected by a firewall  
+```nmap –F 172.168.1.1```: This perform a fast scan l  
+```nmap --reason 172.168.1.1```: This displays the reason a port is in a particular state   
+```nmap --open 172.168.1.1```: This only shows open or possibly open ports  
+```nmap –O 172.168.1.1```: This scan shows the operating system   
 
 
 
