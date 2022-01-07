@@ -201,8 +201,8 @@ To install stormbreaker use command git clone https://github.com/ultrasecurity/S
 ### Step 1  
 On linux terminal, Use commands  
   
-cd Storm-Breaker
-sudo bash install.sh
+```cd Storm-Breaker```  
+```sudo bash install.sh```  
   
 ![image](https://user-images.githubusercontent.com/97077110/148499856-a8709eb4-74c9-4985-bd8f-90949efdcbdd.png)  
 ![image](https://user-images.githubusercontent.com/97077110/148499875-9c672094-b586-4a2e-880d-0d9b014d1366.png)  
