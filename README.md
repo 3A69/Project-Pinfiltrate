@@ -134,6 +134,7 @@ Thus, Zerotier is now completely setup and you are able to remotely connect to t
 
 Installation of TheFatRat tool from GitHub.Run command.
 $  sudo git clone https://github.com/screetsec/TheFatRat
+test
 
 
 
