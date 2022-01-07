@@ -283,7 +283,72 @@ The target will see this , when he or she click into the link.
 
 
 ## Credential found:  
-![image](https://user-images.githubusercontent.com/97077110/148508563-50dfe0b2-0da1-48e4-a4c0-6a5d425e806a.png)
+![image](https://user-images.githubusercontent.com/97077110/148508563-50dfe0b2-0da1-48e4-a4c0-6a5d425e806a.png)  
+
+
+## Social engineering tool   
+## Setup:  
+
+### Step 1:  
+Search Social engineering toolkit on kali    
+
+
+![image](https://user-images.githubusercontent.com/97077110/148537649-316ffc26-2ab9-425d-aa3e-23a8dc297b54.png)
+
+
+
+### Step 2:  
+
+Select option Social-Engineering Attacks
+``` Set > 1```  
+![image](https://user-images.githubusercontent.com/97077110/148537728-aa435ce9-c1f7-4f83-a34c-05bf7c334e27.png)
+
+
+
+### Step 3:
+Then select  Mass Mailer attack  
+```Set > 5```  
+![image](https://user-images.githubusercontent.com/97077110/148537775-5be45f49-a403-46da-b150-4f3a616f4f99.png)
+
+
+
+
+### Step 4:
+Then choose 1. E-mail Attack Single Email address(spear phishing)  
+
+![image](https://user-images.githubusercontent.com/97077110/148537842-0c8eec64-73fe-4edb-9a8a-db6c7cc813f8.png)
+
+
+
+### Step 5:  
+Enter target’s email  
+Enter your email  
+Enter the name the target will see  
+Enter your email password   
+
+![image](https://user-images.githubusercontent.com/97077110/148537979-165642b5-2cd6-44b0-9a1b-bef752926c5f.png)
+
+
+Select and customize the email and enter the suspicious link.   
+
+![image](https://user-images.githubusercontent.com/97077110/148538000-2a25e7ec-f4af-4c1e-9262-6b031c983135.png)
+
+
+
+### Target side :  
+
+![image](https://user-images.githubusercontent.com/97077110/148538039-1d4a7b75-a10b-4cf5-bc6f-f157033fb82f.png)
+
+
+
+### Troubleshooting:  
+There is a connection blocked by gmail as there is a safety feature that don't allow external application to access the email.  
+![image](https://user-images.githubusercontent.com/97077110/148538157-1ba2eab5-fdb2-478a-b6f4-b0e25863ad56.png)
+
+
+We need to Turn off Less secure app access.  
+
+![image](https://user-images.githubusercontent.com/97077110/148538192-927afed2-367a-416c-aaee-30c597250e96.png)
 
 
 
