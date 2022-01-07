@@ -201,9 +201,7 @@ To install stormbreaker use command git clone https://github.com/ultrasecurity/S
 
 ## Setting up StormBreaker  
 ### Step 1  
-On linux terminal, Use commands  
-![image](https://user-images.githubusercontent.com/97077110/148505524-d80cfa35-fc41-4a7b-8276-7bc00de7b00a.png)
-
+On linux terminal, Use commands.  
   
 ```cd Storm-Breaker```  
 ```sudo bash install.sh```  
@@ -213,33 +211,32 @@ On linux terminal, Use commands
 
 
 ### Step 2  
-create a ngrok account for public url hosting.  
+Create a ngrok account for public url hosting.  
 ![image](https://user-images.githubusercontent.com/97077110/148505889-ff90b637-b977-426e-8fc6-875c297d1303.png)
 ![image](https://user-images.githubusercontent.com/97077110/148505959-fdfc8ef8-38b3-4d46-b441-132ba5ec411b.png)
 
   
 ### Step 3  
-Append the authtoken into ngrok in kali using command sudo ngrok authtoken (your token number)  
+Append the authtoken into ngrok in kali using command sudo ngrok authtoken (your token number).  
+```sudo ngrok authtoken (your token number)```  
 ![image](https://user-images.githubusercontent.com/97077110/148506008-49eb7a3d-fea4-4d97-9ba7-6b37016b1ad8.png)
   
-## Using stormbreaker  
+## Using StormBreaker  
 ### Step 1 
-use command  sudo python3 Storm-Breaker.py  
+Use command  sudo python3 Storm-Breaker.py  
 ![image](https://user-images.githubusercontent.com/97077110/148506055-15f652d5-477b-4bb4-a06c-65617683e1f5.png)  
 
 
-We are attempting to get the location of the target  
+We are attempting to get the location of the target.    
 ```[STORM-BREAKER@HOME]:$ 4```
 ![image](https://user-images.githubusercontent.com/97077110/148506182-ec9b6603-0c3d-43c3-bacf-ac1630e9ba2c.png)  
 
 
-Choose template :nearyou
+Choose template :nearyou.  
 ```[STORM-BREAKER@HOME/GET-LOC/SELECT-TEMPLATE]:$ 1```  
 ![image](https://user-images.githubusercontent.com/97077110/148506323-24dd5d64-8004-4c7f-94b2-445868c5c20e.png)
 
-
-
-Copy the link and send to the target  
+Copy the link and send to the target.  
 
 Once the Target opens the link , he/she will be prompted to enable location, once the target enables the location, it will immediately send it back to the host machine.  
 
