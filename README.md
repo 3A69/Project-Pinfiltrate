@@ -252,6 +252,56 @@ The tool will provide the exact location using google map.
 ![image](https://user-images.githubusercontent.com/97077110/148506581-d35cd297-9914-413b-b80e-b219597aae86.png)
 
 
+## Blackeye:  
+![image](https://user-images.githubusercontent.com/97077110/148507920-61c6d4de-572a-4471-999b-3f6dbb1c76ba.png)  
+
+
+
+## Installation:
+```$ sudo git clone https://github.com/An0nUD4Y /blackeye.git```  
+![image](https://user-images.githubusercontent.com/97077110/148507953-1869121b-5a5c-4ea0-a30c-8f745e53ecf0.png)  
+
+
+We need to edit certain values of the file as there are functions that do not work with the new version of kali. Therefore the author recommends the user to change the code.   
+
+At line 436 change to:
+```link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")```
+
+![image](https://user-images.githubusercontent.com/97077110/148508086-f981dfb1-1d2f-4a9b-8297-fa9f54b7f35e.png)
+
+![image](https://user-images.githubusercontent.com/97077110/148508147-d51bf81f-afe7-4bd1-aea1-1bf80f2bcd9e.png)
+
+
+
+## Run the tool:
+```$ sudo bash blackeye.sh```    
+``` Choose an option : 6```  
+![image](https://user-images.githubusercontent.com/97077110/148508266-60722c6b-82f6-4d78-933e-2acea804ee89.png)  
+
+The target will see this , when he or she click into the link.  
+![image](https://user-images.githubusercontent.com/97077110/148508408-c0c57fb3-3f2b-4c3a-a682-aff226803158.png)  
+
+
+## Credential found  
+![image](https://user-images.githubusercontent.com/97077110/148508563-50dfe0b2-0da1-48e4-a4c0-6a5d425e806a.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
