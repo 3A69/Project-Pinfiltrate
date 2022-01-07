@@ -221,17 +221,17 @@ Append the authtoken into ngrok in kali using command sudo ngrok authtoken (your
 ```sudo ngrok authtoken (your token number)```  
 ![image](https://user-images.githubusercontent.com/97077110/148506008-49eb7a3d-fea4-4d97-9ba7-6b37016b1ad8.png)
   
-## Using StormBreaker  
-### Step 1 
+### Using StormBreaker  
+### Step 1  
 Use command  sudo python3 Storm-Breaker.py  
 ![image](https://user-images.githubusercontent.com/97077110/148506055-15f652d5-477b-4bb4-a06c-65617683e1f5.png)  
 
-
+### Step 2  
 We are attempting to get the location of the target.    
 ```[STORM-BREAKER@HOME]:$ 4```
 ![image](https://user-images.githubusercontent.com/97077110/148506182-ec9b6603-0c3d-43c3-bacf-ac1630e9ba2c.png)  
 
-
+### Step 3  
 Choose template :nearyou.  
 ```[STORM-BREAKER@HOME/GET-LOC/SELECT-TEMPLATE]:$ 1```  
 ![image](https://user-images.githubusercontent.com/97077110/148506323-24dd5d64-8004-4c7f-94b2-445868c5c20e.png)
@@ -242,6 +242,7 @@ Once the Target opens the link , he/she will be prompted to enable location, onc
 
 ![image](https://user-images.githubusercontent.com/97077110/148506354-06429a3b-35ba-4844-abdf-67edfd3f1943.png)
 
+### Target side  
 The target will see this on his/her phone.
 The Target will be prompt to on his/her location adn the location will be send to the attacker.  
 
@@ -257,7 +258,7 @@ The tool will provide the exact location using google map.
 
 
 
-## Installation:
+### Installation:
 ```$ sudo git clone https://github.com/An0nUD4Y /blackeye.git```  
 ![image](https://user-images.githubusercontent.com/97077110/148507953-1869121b-5a5c-4ea0-a30c-8f745e53ecf0.png)  
 
@@ -273,7 +274,7 @@ At line 436 change to:
 
 
 
-## Run the tool:
+### Run the tool:
 ```$ sudo bash blackeye.sh```    
 ``` Choose an option : 6```  
 ![image](https://user-images.githubusercontent.com/97077110/148508266-60722c6b-82f6-4d78-933e-2acea804ee89.png)  
@@ -282,12 +283,12 @@ The target will see this , when he or she click into the link.
 ![image](https://user-images.githubusercontent.com/97077110/148508408-c0c57fb3-3f2b-4c3a-a682-aff226803158.png)  
 
 
-## Credential found:  
+### Credential found:  
 ![image](https://user-images.githubusercontent.com/97077110/148508563-50dfe0b2-0da1-48e4-a4c0-6a5d425e806a.png)  
 
 
 ## Social engineering tool   
-## Setup:  
+### Setup:  
 
 ### Step 1:  
 Search Social engineering toolkit on kali    
@@ -351,6 +352,34 @@ We need to Turn off Less secure app access.
 ![image](https://user-images.githubusercontent.com/97077110/148538192-927afed2-367a-416c-aaee-30c597250e96.png)
 
 
+
+## Nmap(Network mapper)  
+![image](https://user-images.githubusercontent.com/97077110/148538577-435bcdd1-7511-4750-913e-6b3193e41897.png)
+
+
+Nmap is the most widely used open source program for scanning hosts and services on a network The sophisticated features of Nmap can detect many applications that operate on systems, as well as services such as the
+
+Features for fingerprinting the operating system. Nmap is a powerful tool, but it can also be dangerous.
+Unless utilized appropriately, it is clearly detectable. 
+Nmap is best used in specific situations to prevent triggering a target's defense systems, avoid the following conditions.
+
+Using of Nmap:
+Nmap can be used to scan local networks.There are many commands that we can use to tune our scan.
+
+nmap 172.168.1.0/24: This scans the entire class C range   
+nmap -p : This scans specific ports   
+nmap -sP 172.168.1.0/24: This scans the network/find servers and devices that are running   
+nmap –iflist: This shows host interfaces and routes   
+nmap –sV 172.168.1.1: This detects remote services' version numbers   
+nmap –sS 172.168.1.1: This performs a stealthy TCP SYN scan   
+nmap –sO 172.168.1.1: This scans for the IP protocol   
+nmap -172.168.1.1 > output.txt: This saves the output from the scan to the text file   
+nmap –sA 172.168.1.254: This checks whether the host is protected by a firewall  
+nmap –PN 172.168.1.1: This scans the host when it is protected by a firewall  
+nmap –F 172.168.1.1: This perform a fast scan l  
+nmap --reason 172.168.1.1: This displays the reason a port is in a particular state   
+nmap --open 172.168.1.1: This only shows open or possibly open ports  
+nmap –O 172.168.1.1: This scan shows the operating system   
 
 
 
