@@ -195,29 +195,63 @@ FinalRecon screenshot:
 
 
 # StormBreaker  
+![image](https://user-images.githubusercontent.com/97077110/148505490-62e933a2-4809-4a5f-b4b1-ced4ca922be7.png)
+
 To install stormbreaker use command git clone https://github.com/ultrasecurity/Storm-Breaker.git  
-![image](https://user-images.githubusercontent.com/97077110/148499754-d61980ad-7d5a-421e-84be-89149728eb21.png)  
+
 ## Setting up StormBreaker  
 ### Step 1  
 On linux terminal, Use commands  
+![image](https://user-images.githubusercontent.com/97077110/148505524-d80cfa35-fc41-4a7b-8276-7bc00de7b00a.png)
+
   
 ```cd Storm-Breaker```  
 ```sudo bash install.sh```  
-  
-![image](https://user-images.githubusercontent.com/97077110/148499856-a8709eb4-74c9-4985-bd8f-90949efdcbdd.png)  
-![image](https://user-images.githubusercontent.com/97077110/148499875-9c672094-b586-4a2e-880d-0d9b014d1366.png)  
+  ![image](https://user-images.githubusercontent.com/97077110/148505656-3192afc8-f267-45bc-832d-bd86d02b2651.png)  
+ ![image](https://user-images.githubusercontent.com/97077110/148505781-6b58edfd-a194-44ed-bc03-908436caf218.png)
+
+
+
 ### Step 2  
 create a ngrok account for public url hosting.  
-![image](https://user-images.githubusercontent.com/97077110/148501270-3ab1cb4d-23a6-48b1-9b42-e2e321692083.png)  
-![image](https://user-images.githubusercontent.com/97077110/148501302-b231c270-4d83-41aa-88d1-99b08ae67e32.png)  
+![image](https://user-images.githubusercontent.com/97077110/148505889-ff90b637-b977-426e-8fc6-875c297d1303.png)
+![image](https://user-images.githubusercontent.com/97077110/148505959-fdfc8ef8-38b3-4d46-b441-132ba5ec411b.png)
+
+  
 ### Step 3  
 Append the authtoken into ngrok in kali using command sudo ngrok authtoken (your token number)  
-![image](https://user-images.githubusercontent.com/97077110/148501773-e06cbab8-36c6-4791-82ee-de0a0875773e.png)  
+![image](https://user-images.githubusercontent.com/97077110/148506008-49eb7a3d-fea4-4d97-9ba7-6b37016b1ad8.png)
+  
 ## Using stormbreaker  
 ### Step 1 
 use command  sudo python3 Storm-Breaker.py  
-![image](https://user-images.githubusercontent.com/97077110/148502402-13a01eb2-f195-4f85-87d5-9eaccae0d2b8.png)
+![image](https://user-images.githubusercontent.com/97077110/148506055-15f652d5-477b-4bb4-a06c-65617683e1f5.png)  
 
+
+We are attempting to get the location of the target  
+```[STORM-BREAKER@HOME]:$ 4```
+![image](https://user-images.githubusercontent.com/97077110/148506182-ec9b6603-0c3d-43c3-bacf-ac1630e9ba2c.png)  
+
+
+Choose template :nearyou
+```[STORM-BREAKER@HOME/GET-LOC/SELECT-TEMPLATE]:$ 1```  
+![image](https://user-images.githubusercontent.com/97077110/148506323-24dd5d64-8004-4c7f-94b2-445868c5c20e.png)
+
+
+
+Copy the link and send to the target  
+
+Once the Target opens the link , he/she will be prompted to enable location, once the target enables the location, it will immediately send it back to the host machine.  
+
+![image](https://user-images.githubusercontent.com/97077110/148506354-06429a3b-35ba-4844-abdf-67edfd3f1943.png)
+
+The target will see this on his/her phone.    
+
+![image](https://user-images.githubusercontent.com/97077110/148506539-51c2506c-a9fb-41a0-968e-b746419e08ce.png)
+
+
+The tool will provide the exact location using google map.   
+![image](https://user-images.githubusercontent.com/97077110/148506581-d35cd297-9914-413b-b80e-b219597aae86.png)
 
 
 
