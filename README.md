@@ -381,8 +381,20 @@ Nmap can be used to scan local networks.There are many commands that we can use 
 ```nmap --open 172.168.1.1```: This only shows open or possibly open ports  
 ```nmap –O 172.168.1.1```: This scan shows the operating system   
 
+## TcpDump
+### Setup TcpDump:  
+``sudo apt-get install tcpdump```  
+![image](https://user-images.githubusercontent.com/97077110/148543181-aec55008-fa02-4a00-99b8-053e773aeed2.png)
 
+## Using TcpDump:  
+```sudo tcpdump```  
+![image](https://user-images.githubusercontent.com/97077110/148543279-37c47c72-785d-4010-a36a-11d5365cd9f4.png)  
 
+```sudo tcp-dump -D```  : used to check available interfaces  
+![image](https://user-images.githubusercontent.com/97077110/148543863-eee19f3f-1fa9-44b7-9e0d-f0f7fe3970f6.png)  
+
+```sudo tcpdump -i any -w fyp.pcap``` :capture all connection from any interface and write to fyp.pcap file
+![image](https://user-images.githubusercontent.com/97077110/148544451-d9a9459d-647b-4c92-8179-1d521c9af03b.png)
 
 
 
