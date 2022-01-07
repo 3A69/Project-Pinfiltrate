@@ -93,7 +93,7 @@ The Mac address can be found in step 3 under **BSSID**.
 Now, we will try to capture traffic from that wireless device, we have to wait until **EAPOL** appears befire we end the process.  
 ![image](https://user-images.githubusercontent.com/97077110/148359144-f19b2320-9c55-4fdd-a4cc-b29861ab903d.png)  
 ### Step 7:  
-Run the command ```automation.py -c  ```.
+Run the command ```automation.py -c  ```.  
 Enter the wireshark file name that you have save   
 ![image](https://user-images.githubusercontent.com/97077110/148503822-088080df-59bf-4966-a840-efebef3a563e.png)
 
@@ -192,6 +192,8 @@ FinalRecon screenshot:
 ![image](https://user-images.githubusercontent.com/97077110/148497246-e58cf561-df5f-445a-bc18-20c07db60587.png)  
 ![image](https://user-images.githubusercontent.com/97077110/148497283-6c3681c7-8271-42b4-945b-cd4532ed8ffb.png)  
 ![image](https://user-images.githubusercontent.com/97077110/148497306-cc6cf98a-06a4-4e9f-a67b-7f6e8446dff2.png)  
+
+
 
 
 
