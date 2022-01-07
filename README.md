@@ -242,7 +242,8 @@ Once the Target opens the link , he/she will be prompted to enable location, onc
 
 ![image](https://user-images.githubusercontent.com/97077110/148506354-06429a3b-35ba-4844-abdf-67edfd3f1943.png)
 
-The target will see this on his/her phone.    
+The target will see this on his/her phone.
+The Target will be prompt to on his/her location adn the location will be send to the attacker.  
 
 ![image](https://user-images.githubusercontent.com/97077110/148506539-51c2506c-a9fb-41a0-968e-b746419e08ce.png)
 
