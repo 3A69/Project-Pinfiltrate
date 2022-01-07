@@ -194,6 +194,29 @@ FinalRecon screenshot:
 ![image](https://user-images.githubusercontent.com/97077110/148497306-cc6cf98a-06a4-4e9f-a67b-7f6e8446dff2.png)  
 
 
+# StormBreaker  
+To install stormbreaker use command git clone https://github.com/ultrasecurity/Storm-Breaker.git  
+![image](https://user-images.githubusercontent.com/97077110/148499754-d61980ad-7d5a-421e-84be-89149728eb21.png)  
+## Setting up StormBreaker  
+### Step 1  
+On linux terminal, Use commands  
+  
+cd Storm-Breaker
+sudo bash install.sh
+  
+![image](https://user-images.githubusercontent.com/97077110/148499856-a8709eb4-74c9-4985-bd8f-90949efdcbdd.png)  
+![image](https://user-images.githubusercontent.com/97077110/148499875-9c672094-b586-4a2e-880d-0d9b014d1366.png)  
+### Step 2  
+create a ngrok account for public url hosting.  
+![image](https://user-images.githubusercontent.com/97077110/148501270-3ab1cb4d-23a6-48b1-9b42-e2e321692083.png)  
+![image](https://user-images.githubusercontent.com/97077110/148501302-b231c270-4d83-41aa-88d1-99b08ae67e32.png)  
+### Step 3  
+Append the authtoken into ngrok in kali using command sudo ngrok authtoken (your token number)  
+![image](https://user-images.githubusercontent.com/97077110/148501773-e06cbab8-36c6-4791-82ee-de0a0875773e.png)  
+## Using stormbreaker  
+### Step 1 
+use command  sudo python3 Storm-Breaker.py  
+![image](https://user-images.githubusercontent.com/97077110/148502402-13a01eb2-f195-4f85-87d5-9eaccae0d2b8.png)
 
 
 
