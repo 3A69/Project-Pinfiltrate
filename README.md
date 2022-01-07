@@ -387,6 +387,10 @@ Nmap can be used to scan local networks.There are many commands that we can use 
 ![image](https://user-images.githubusercontent.com/97077110/148543181-aec55008-fa02-4a00-99b8-053e773aeed2.png)
 
 ## Using TcpDump:  
+![image](https://user-images.githubusercontent.com/97077110/148545086-94b6315e-07e3-4e02-9ad3-6f68f3b4bd3d.png)   
+
+Tcpdump is a packet analyzer that runs from the command line. TCP/IP and other packets that are transmitted through the network and seen by the system can be intercepted and displayed by using tcpdump. However the Raspberry Pi must be connected to the network to do so.  
+
 ```sudo tcpdump```  
 ![image](https://user-images.githubusercontent.com/97077110/148543279-37c47c72-785d-4010-a36a-11d5365cd9f4.png)  
 
