@@ -248,7 +248,7 @@ Append the authtoken into ngrok in kali using command sudo ngrok authtoken (your
 ```sudo ngrok authtoken (your token number)```  
 ![image](https://user-images.githubusercontent.com/97077110/148506008-49eb7a3d-fea4-4d97-9ba7-6b37016b1ad8.png)  
   
-### Using StormBreaker  
+### Execution of StormBreaker  
 ### Step 1  
 Use command  sudo python3 Storm-Breaker.py  
 ![image](https://user-images.githubusercontent.com/97077110/148506055-15f652d5-477b-4bb4-a06c-65617683e1f5.png)  
