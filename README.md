@@ -516,9 +516,69 @@ use command ```mono LOIC.exe```
 ## Installation:  
 use command ```sudo apt-get install tshark```  
 Using of tshark:  
-tshark [ -i <capture interface>|- ] [ -f <capture filter> ] [ -2 ] [ -r <infile> ] [ -w <outfile>|- ] [ options ] [ <filter> ]  
+```
+tshark [ -i <capture interface>|- ] [ -f <capture filter> ] [ -2 ] [ -r <infile> ] [ -w <outfile>|- ] [ options ] [ <filter> ]
+```
 ![image](https://user-images.githubusercontent.com/97077110/148888944-45b496a7-c02b-416a-957e-83e83fecf20e.png  
-Macchanger:  
+# Macchanger  
+use command ```sudo apt-get install macchanger```  
+![image](https://user-images.githubusercontent.com/97077110/148889187-28a50616-51dc-47ac-9a80-486338ac4705.png)  
+Before macchanger:  
+![image](https://user-images.githubusercontent.com/97077110/148890109-e935c83a-321b-4736-8262-fe9e454d2eb6.png)  
+![image](https://user-images.githubusercontent.com/97077110/148890136-d531ee2d-1f88-41bb-af33-05d31d39dd91.png)  
+![image](https://user-images.githubusercontent.com/97077110/148890178-672c75e9-6a9f-4e24-98ed-c6b7152e1918.png) 
+use command ```macchanger -L``` to list the mac address of the different vendor and devices  
+![image](https://user-images.githubusercontent.com/97077110/148890376-a60085cd-2b02-4b61-b734-cfa68494e617.png)  
+# Maskphish  
+## Installation:  
+### step 1:
+use command ```sudo git clone https://github.com/jaykali/maskphish.git1```  
+![image](https://user-images.githubusercontent.com/97077110/148890516-2c2cbece-2a13-4463-bfff-8825a5601e90.png)  
+### step 2:  
+use commands 
+```  
+cd maskphish
+sudo chmod +x maskphish.sh
+```  
+![image](https://user-images.githubusercontent.com/97077110/148892291-2a92a737-db81-4587-9b64-c929018075b6.png)  
+![image](https://user-images.githubusercontent.com/97077110/148892322-b4333806-78ee-4cbf-b424-73dc4527158f.png)  
+![image](https://user-images.githubusercontent.com/97077110/148892352-2590fbc4-0280-4808-acd6-b5acaa6817fd.png)  
+
+# Impulse tool:  
+## Installation:  
+### Step 1:  
+git clone https://github.com/LimerBoy/Impulse  
+![image](https://user-images.githubusercontent.com/97077110/148892475-2cec9aa2-dce6-4dda-98cf-e09f634cc1a1.png)  
+### Step 2:  
+use commands 
+```
+cd impulse 
+sudo pip3 install -r requirements.txt    
+```  
+![image](https://user-images.githubusercontent.com/97077110/148892577-d0ff727d-6bd7-4501-8d59-f764d1ed7142.png)  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
 	
 
 
