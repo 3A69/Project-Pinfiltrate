@@ -407,27 +407,27 @@ Proxychains is a UNIX application that allows us to mask our legitimate IP addre
 
 Installation and setup of Proxychain:  
 
-Step 1:  
+### Step 1:  
 
 ```$ sudo apt-get install proxychains  tor```
 ![image](https://user-images.githubusercontent.com/97077110/148881168-b78b4c58-f39c-44c4-a5e3-c926bdacd7f9.png)  
 
 
-Step 2:  
+### Step 2:  
 ```Sudo nano /etc/proxychains.conf```  
 ![image](https://user-images.githubusercontent.com/97077110/148881238-9083998b-cd1c-489f-8b2a-955989efef81.png)  
 
-Step 3:  
+### Step 3:  
 ```nano /etc/proxychains.conf```  
 Delete # at dynamic_chain  
 ![image](https://user-images.githubusercontent.com/97077110/148881388-163894fc-6192-4fa2-acf4-63874f9abe8c.png)  
 
-Step 4:
+### Step 4:
 ```sudo systemctl enable tor.service``` 
 
 ![image](https://user-images.githubusercontent.com/97077110/148881455-e4d091d4-0997-4e3e-ae1d-6bca4ef77cfd.png)  
 
-### Using of Proxychain:  
+## Using of Proxychain:  
 ```Proxychains firefox google.com ```
 ![image](https://user-images.githubusercontent.com/97077110/148881485-d9473769-1d43-4d9a-bb42-dd8a4f9344a8.png)  
 
@@ -439,13 +439,59 @@ Proxychain NMAP:
 
 
 
-### Recon-ng gather information(can someone help me research more like wat other marketplace install)
+## Recon-ng gather information(can someone help me research more like wat other marketplace install)
 
 Recon-ng is a full featured reconnaissance framework that aims to provide a powerful environment for doing open source web-based reconnaissance rapidly and thoroughly.  
 
 Installation:  
 ```Sudo git clone https://github.com/lanmaster53/recon-ng.git```  
 ![image](https://user-images.githubusercontent.com/97077110/148882758-4d216ff2-e589-4dd4-879a-c3a4c7761515.png)  
+## Using of Recon-ng  
+Use commands  
+```  
+Cd recon-ng
+./recon-ng
+```  
+![image](https://user-images.githubusercontent.com/97077110/148884598-fa333a26-36b7-4d87-9322-bd0b96f76d41.png)  
+Create a template :workspaces create FYP  
+![image](https://user-images.githubusercontent.com/97077110/148884707-97afda95-d464-49ee-b591-a595541d0b30.png)  
+
+## Using of whois_procs:  
+Use commands  
+```  
+marketplace install recon/domains-contact/whois_proc
+Modules load recon/domains-contacts/whois_procs
+Options set SOURCE facebook.com
+run
+```  
+![image](https://user-images.githubusercontent.com/97077110/148884879-fc9c0a74-d646-42c8-b241-5179e75a98f9.png)  
+Use  
+```  
+marketplace install discovery/info_discovery/info_disclosures/interesting_files   
+Modules load discovery/info_disclosures/interesting_files.  
+Options set SOURCE facebook.com  
+```  
+![image](https://user-images.githubusercontent.com/97077110/148885096-caaee32b-600d-48ac-828c-b1a99ebc63c1.png)  
+![image](https://user-images.githubusercontent.com/97077110/148885136-d54b030d-119e-4bde-a550-d7b384bd3b70.png)  
+![image](https://user-images.githubusercontent.com/97077110/148885166-f72a1697-3ef5-4691-bafe-1336dbcd0d88.png)  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
