@@ -285,7 +285,7 @@ The tool will provide the exact location using google map.
 
 
 
-### Installation of blackeye:
+### Installation of Blackeye:
 ```$ sudo git clone https://github.com/An0nUD4Y /blackeye.git```  
 ![image](https://user-images.githubusercontent.com/97077110/148507953-1869121b-5a5c-4ea0-a30c-8f745e53ecf0.png)   
 
@@ -301,7 +301,7 @@ At line 436 change to:
 
 
 
-### Execution of StormBreaker:
+### Execution of Blackeye:
 ```$ sudo bash blackeye.sh```    
 ``` Choose an option : 6```  
 ![image](https://user-images.githubusercontent.com/97077110/148508266-60722c6b-82f6-4d78-933e-2acea804ee89.png)  
