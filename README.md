@@ -5,21 +5,41 @@
   - [Automation Script](#automation-script)
   - [Using of the Automation script](#using-of-the-automation-script)
 - [Zerotier Vpn](#zerotier-vpn)
-- [TheFatRat tool](#thefatrat-tool)
-  - [Setup of TheFatRat tool](#setup-of-thefatrat-tool)
-  - [Running of the tool](#running-of-the-tool)
-  - [Main page of TheFatRat tool](#main-page-of-thefatrat-tool)
+- [TheFatRat](#thefatrat)
+  - [Setup of TheFatRat tool](#setup-of-thefatrat)
+  - [Execution of TheFatRat](#execution-of-TheFatRat)
+  - [Main page of TheFatRat](#main-page-of-thefatrat)
   - [configuration](#configuration)
   - [Payload file](#payload-file)
-  - [Target side](#target-side)
+  - [Target side of TheFatRat](#target-side-of-thefatrat-tool)
 - [StormBreaker](#stormbreaker)
   - [Setting up StormBreaker](#setting-up-stormbreaker)
-  - [Using StormBreaker](#using-stormbreaker)
-  - [Target side](#target-side)
+  - [Execution of StormBreaker](#execution-of-stormbreaker)
+  - [Target side of StormBreaker](#target-side-of-stormbreaker)
  - [Blackeye](#blackeye)
-   - [Installation](#installation)
-   - [Running the tool](#running-the-tool)
+   - [Installation of blackeye](#installation-of-blackeye)
+   - [Execution of Blackeye](#execution-of-blackeye)
    - [Credential found](#credential-found)
+ - [Social engeering tool](#social-engineering-tool)
+   - [Target side pf Social engineering tool](#target-side-of-social-engineering-tool)
+   - [troubleshooting](#troubleshooting)
+ - [Nmap(networkmapper)](#Nmap(network mapper)) 
+ - [TcpDump](#tcpdump)
+  - [Setup TcpDump](#setup-tcpdump)
+  - [proxychain tor](#proxychain-tor)
+  - [Using of Proxychain](#using-of-proxychain)
+- [Recon-ng](#recon-ng)
+  - [Using of Recon-ng](#using-of-recon-ng)
+  - [Using of whois_procs](#using-of-whois_procs)
+- [Ettercap](#ettercap)
+  - [Installation of Ettercap](#installation-of-ettercap)
+- [Low orbit ion cannon](#low-orbit-ion-cannon)
+  - [Installation of Low orbit ion cannon](#installation-of-low-orbit-ion-cannon)
+- [LOIC](#loic)
+- [Tshark](#tshark)
+  - [installation of Tshark](#installation-of-tshark)
+- [Macchanger](#macchanger)
+- [Maskphish](#maskphish)
    
    
  
@@ -248,7 +268,7 @@ Append the authtoken into ngrok in kali using command sudo ngrok authtoken (your
 ```sudo ngrok authtoken (your token number)```  
 ![image](https://user-images.githubusercontent.com/97077110/148506008-49eb7a3d-fea4-4d97-9ba7-6b37016b1ad8.png)  
   
-### Execution of StormBreaker  
+### Using StormBreaker  
 ### Step 1  
 Use command  sudo python3 Storm-Breaker.py  
 ![image](https://user-images.githubusercontent.com/97077110/148506055-15f652d5-477b-4bb4-a06c-65617683e1f5.png)  
@@ -285,7 +305,7 @@ The tool will provide the exact location using google map.
 
 
 
-### Installation of Blackeye:
+### Installation:
 ```$ sudo git clone https://github.com/An0nUD4Y /blackeye.git```  
 ![image](https://user-images.githubusercontent.com/97077110/148507953-1869121b-5a5c-4ea0-a30c-8f745e53ecf0.png)   
 
@@ -301,7 +321,7 @@ At line 436 change to:
 
 
 
-### Execution of Blackeye:
+### Execution of StormBreaker:
 ```$ sudo bash blackeye.sh```    
 ``` Choose an option : 6```  
 ![image](https://user-images.githubusercontent.com/97077110/148508266-60722c6b-82f6-4d78-933e-2acea804ee89.png)  
@@ -492,7 +512,7 @@ Options set SOURCE facebook.com
 run
 ```  
 ![image](https://user-images.githubusercontent.com/97077110/148884879-fc9c0a74-d646-42c8-b241-5179e75a98f9.png)  
-Use commands 
+Use  
 ```  
 marketplace install discovery/info_discovery/info_disclosures/interesting_files   
 Modules load discovery/info_disclosures/interesting_files.  
@@ -502,7 +522,7 @@ Options set SOURCE facebook.com
 ![image](https://user-images.githubusercontent.com/97077110/148885136-d54b030d-119e-4bde-a550-d7b384bd3b70.png)  
 ![image](https://user-images.githubusercontent.com/97077110/148885166-f72a1697-3ef5-4691-bafe-1336dbcd0d88.png)  
 # Ettercap:  
-## Installation of Ettercap:  
+## Installation:  
 ``` Sudo apt-get install ettercap-common```  
 ![image](https://user-images.githubusercontent.com/97077110/148885495-9d4eb8c0-0f77-47ab-8abc-784b032fea4e.png)  
 Running Ethecap software use command ```ettercap -G```  
@@ -520,7 +540,7 @@ Scan the host by clicking on the icon
 ![image](https://user-images.githubusercontent.com/97077110/148886289-f5dce947-efda-446a-89c7-ca150cb26d71.png)  
 # Red Python Wifi Ddos attack:  
 # Low orbit ion cannon:  
-## Installation of Low orbit ion cannon:   
+## Installation  
 ### Step 1: 
 Download LOIC software on google, use the Sourceforge link to download the software  
 ![image](https://user-images.githubusercontent.com/97077110/148886414-3366e23f-1018-4874-8fdf-cbb5157e0050.png)  
@@ -540,7 +560,7 @@ use command ```mono LOIC.exe```
 ![image](https://user-images.githubusercontent.com/97077110/148887661-5ac9ba8c-eca3-4689-839a-4c98fa2afe0a.png)  
 # Driftnet  
 # Tshark  
-## Installation of Tshark:  
+## Installation:  
 use command ```sudo apt-get install tshark```  
 Using of tshark:  
 ```
