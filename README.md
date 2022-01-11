@@ -492,7 +492,7 @@ Options set SOURCE facebook.com
 run
 ```  
 ![image](https://user-images.githubusercontent.com/97077110/148884879-fc9c0a74-d646-42c8-b241-5179e75a98f9.png)  
-Use  
+Use commands 
 ```  
 marketplace install discovery/info_discovery/info_disclosures/interesting_files   
 Modules load discovery/info_disclosures/interesting_files.  
