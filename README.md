@@ -17,7 +17,7 @@
   - [Execution of StormBreaker](#execution-of-stormbreaker)
   - [Target side of StormBreaker](#target-side-of-stormbreaker)
  - [Blackeye](#blackeye)
-   - [Installation of blackeye](#installation-of-blackeye)
+   - [Installation of Blackeye](#installation-of-blackeye)
    - [Execution of Blackeye](#execution-of-blackeye)
    - [Credential found](#credential-found)
  - [Social engeering tool](#social-engineering-tool)
