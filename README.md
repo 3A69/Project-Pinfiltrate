@@ -175,7 +175,7 @@ sudo bash setup.sh
 ![image](https://user-images.githubusercontent.com/97077110/148496107-f197f915-667b-435f-b1c4-083299940bd4.png)  
 Keep settings default, **Select enter and yes**  
 ![image](https://user-images.githubusercontent.com/97077110/148496172-b5e27e9f-25fc-442e-936c-21b91890ba80.png)  
-## To run the tool  
+## Execution of TheFatRat  
 Use commands  
 ```  
 cd TheFatRat
@@ -209,7 +209,7 @@ cp filename.bat /var/www/html/(directoryname)
 ```  
 ![image](https://user-images.githubusercontent.com/97077110/148496890-5807789f-dde9-4777-93fe-f188dc84cef8.png)  
 
-## Target side:  
+## Target side of TheFatRat tool:  
 Go to browser and go to the Host IP address 172.16.35.14/FYP/  
 ![image](https://user-images.githubusercontent.com/97077110/148496961-ed19ae58-ddf2-4109-8c61-85709c90c3c8.png)  
 Download the fyp.bat and run it on the target system.  
@@ -269,7 +269,7 @@ Once the Target opens the link , he/she will be prompted to enable location, onc
 
 ![image](https://user-images.githubusercontent.com/97077110/148506354-06429a3b-35ba-4844-abdf-67edfd3f1943.png)  
 
-### Target side  
+### Target side of StormBreaker  
 The target will see this on his/her phone.
 The Target will be prompt to on his/her location adn the location will be send to the attacker.  
 
@@ -301,7 +301,7 @@ At line 436 change to:
 
 
 
-### Run the tool:
+### Execution of StormBreaker:
 ```$ sudo bash blackeye.sh```    
 ``` Choose an option : 6```  
 ![image](https://user-images.githubusercontent.com/97077110/148508266-60722c6b-82f6-4d78-933e-2acea804ee89.png)  
@@ -363,7 +363,7 @@ Select and customize the email and enter the suspicious link.
 
 
 
-### Target side :  
+### Target side of Social Engineering tool :  
 
 ![image](https://user-images.githubusercontent.com/97077110/148538039-1d4a7b75-a10b-4cf5-bc6f-f157033fb82f.png)  
 
