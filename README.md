@@ -521,13 +521,15 @@ tshark [ -i <capture interface>|- ] [ -f <capture filter> ] [ -2 ] [ -r <infile>
 ```
 ![image](https://user-images.githubusercontent.com/97077110/148888944-45b496a7-c02b-416a-957e-83e83fecf20e.png  
 # Macchanger  
-use command ```sudo apt-get install macchanger```  
+use command ```sudo apt-get install macchanger```   
 ![image](https://user-images.githubusercontent.com/97077110/148889187-28a50616-51dc-47ac-9a80-486338ac4705.png)  
-Before macchanger:  
-![image](https://user-images.githubusercontent.com/97077110/148890109-e935c83a-321b-4736-8262-fe9e454d2eb6.png)  
-![image](https://user-images.githubusercontent.com/97077110/148890136-d531ee2d-1f88-41bb-af33-05d31d39dd91.png)  
-![image](https://user-images.githubusercontent.com/97077110/148890178-672c75e9-6a9f-4e24-98ed-c6b7152e1918.png) 
-use command ```macchanger -L``` to list the mac address of the different vendor and devices  
+Before Mac Changer:  
+ ![image](https://user-images.githubusercontent.com/97077110/148903307-aa4bdb7c-672b-48d4-810e-7a8c35e9b22e.png)  
+ After applying Mac Changer:  
+ ![image](https://user-images.githubusercontent.com/97077110/148903399-e830a917-3623-458d-8ac2-6643c21b5e33.png)  
+ Current New Mac changer:  
+ ![image](https://user-images.githubusercontent.com/97077110/148903451-5c864143-0a30-4e2a-b36d-2014e30e4882.png)  
+use command ```macchanger -l``` to list the mac address of the different vendor and devices  
 ![image](https://user-images.githubusercontent.com/97077110/148890376-a60085cd-2b02-4b61-b734-cfa68494e617.png)  
 # Maskphish  
 ## Installation:  
@@ -556,6 +558,23 @@ cd impulse
 sudo pip3 install -r requirements.txt    
 ```  
 ![image](https://user-images.githubusercontent.com/97077110/148892577-d0ff727d-6bd7-4501-8d59-f764d1ed7142.png)  
+## using the impulse tool for email:  
+### Step 1:  
+use command ```python3 impulse.py --method email --threads 2 --target (target email)```  
+![image](https://user-images.githubusercontent.com/97077110/148902041-a9e829e0-f119-4a1f-9250-6dfa1fac1e46.png)  
+![image](https://user-images.githubusercontent.com/97077110/148902077-ee711ccf-93c4-415a-8b1e-2c6ffac6ed80.png)   
+target side:  
+![image](https://user-images.githubusercontent.com/97077110/148902152-b2f30ca3-86d8-4c87-b7e5-43e9017d56ae.png)  
+# VLC msfconsole:  
+
+
+
+
+
+
+
+
+
 
 
 
