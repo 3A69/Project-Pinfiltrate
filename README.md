@@ -285,7 +285,7 @@ The tool will provide the exact location using google map.
 
 
 
-### Installation:
+### Installation of blackeye:
 ```$ sudo git clone https://github.com/An0nUD4Y /blackeye.git```  
 ![image](https://user-images.githubusercontent.com/97077110/148507953-1869121b-5a5c-4ea0-a30c-8f745e53ecf0.png)   
 
