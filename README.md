@@ -6,7 +6,7 @@
   - [Using of the Automation script](#using-of-the-automation-script)
 - [Zerotier Vpn](#zerotier-vpn)
 - [TheFatRat](#thefatrat)
-  - [Setup of TheFatRat tool](#setup-of-thefatrat)
+  - [Setup of TheFatRat](#setup-of-thefatrat)
   - [Execution of TheFatRat](#execution-of-TheFatRat)
   - [Main page of TheFatRat](#main-page-of-thefatrat)
   - [configuration](#configuration)
