@@ -6,6 +6,22 @@
   - [Using of the Automation script](#using-of-the-automation-script)
 - [Zerotier Vpn](#zerotier-vpn)
 - [TheFatRat tool](#thefatrat-tool)
+  - [Setup of TheFatRat tool](#setup-of-thefatrat-tool)
+  - [Running of the tool](#running-of-the-tool)
+  - [Main page of TheFatRat tool](#main-page-of-thefatrat-tool)
+  - [configuration](#configuration)
+  - [Payload file](#payload-file)
+  - [Target side](#target-side)
+- [StormBreaker](#stormbreaker)
+  - [Setting up StormBreaker](#setting-up-stormbreaker)
+  - [Using StormBreaker](#using-stormbreaker)
+  - [Target side](#target-side)
+ - [Blackeye](#blackeye)
+   - [Installation](#installation)
+   - [Running the tool](#running-the-tool)
+   - [Credential found](#credential-found)
+   
+   
  
 
 
@@ -159,7 +175,7 @@ sudo bash setup.sh
 ![image](https://user-images.githubusercontent.com/97077110/148496107-f197f915-667b-435f-b1c4-083299940bd4.png)  
 Keep settings default, **Select enter and yes**  
 ![image](https://user-images.githubusercontent.com/97077110/148496172-b5e27e9f-25fc-442e-936c-21b91890ba80.png)  
-## Running of the tool  
+## To run the tool  
 Use commands  
 ```  
 cd TheFatRat
@@ -285,7 +301,7 @@ At line 436 change to:
 
 
 
-### Running the tool:
+### Run the tool:
 ```$ sudo bash blackeye.sh```    
 ``` Choose an option : 6```  
 ![image](https://user-images.githubusercontent.com/97077110/148508266-60722c6b-82f6-4d78-933e-2acea804ee89.png)  
