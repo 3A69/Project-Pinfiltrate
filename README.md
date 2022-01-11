@@ -494,16 +494,28 @@ Scan the host by clicking on the icon
 # Red Python Wifi Ddos attack:  
 # Low orbit ion cannon:  
 ## Installation  
-### Step 1: Download LOIC software on google, use the Sourceforge link to download the software  
+### Step 1: 
+Download LOIC software on google, use the Sourceforge link to download the software  
 ![image](https://user-images.githubusercontent.com/97077110/148886414-3366e23f-1018-4874-8fdf-cbb5157e0050.png)  
 ![image](https://user-images.githubusercontent.com/97077110/148886444-317ac4c7-fc1c-4d12-ac8a-a3c5571908f6.png)  
-### Step 2: Save File into Downloads directory  
+### Step 2: 
+Save File into Downloads directory  
 ![image](https://user-images.githubusercontent.com/97077110/148886476-2eb3ce0d-4b32-499d-b96c-54c5aa992b5e.png)  
-### Step 3: Extract the file out  
+### Step 3: 
+Extract the file out  
 ![image](https://user-images.githubusercontent.com/97077110/148886535-3881bfa4-0177-4fe8-adfe-8df23ee09331.png)  
 ### Step 4: 
 Install the mono tool to help us use the executable software by using command ```sudo apt install mono-complete```  
 ![image](https://user-images.githubusercontent.com/97077110/148886720-8a9ec717-f3aa-4821-b650-a7b498585457.png)  
+# LOIC  
+use command ```mono LOIC.exe```  
+![image](https://user-images.githubusercontent.com/97077110/148887634-1d4f253e-4a37-4d08-a605-501d33ba6cbe.png)  
+![image](https://user-images.githubusercontent.com/97077110/148887661-5ac9ba8c-eca3-4689-839a-4c98fa2afe0a.png)  
+
+
+
+
+
 
 
 
