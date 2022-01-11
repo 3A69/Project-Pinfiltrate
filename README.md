@@ -4,8 +4,8 @@
 - [Airodump](#airodump)
   - [Automation Script](#automation-script)
   - [Using of the Automation script](#using-of-the-automation-script)
--[Zerotier Vpn](#zerotier-vpn)
--[TheFatRat tool](#thefatrat-tool)
+- [Zerotier Vpn](#zerotier-vpn)
+- [TheFatRat tool](#thefatrat-tool)
  
 
 
