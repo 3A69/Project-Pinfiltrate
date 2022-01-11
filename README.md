@@ -20,7 +20,7 @@
    - [Installation of Blackeye](#installation-of-blackeye)
    - [Execution of Blackeye](#execution-of-blackeye)
    - [Credential found](#credential-found)
- - [Social engeering tool](#social-engineering-tool)
+ - [Social engineering tool](#social-engineering-tool)
    - [Target side pf Social engineering tool](#target-side-of-social-engineering-tool)
    - [troubleshooting](#troubleshooting)
  - [Nmap(networkmapper)](#Nmap(network mapper)) 
