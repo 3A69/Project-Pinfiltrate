@@ -474,6 +474,72 @@ Options set SOURCE facebook.com
 ![image](https://user-images.githubusercontent.com/97077110/148885096-caaee32b-600d-48ac-828c-b1a99ebc63c1.png)  
 ![image](https://user-images.githubusercontent.com/97077110/148885136-d54b030d-119e-4bde-a550-d7b384bd3b70.png)  
 ![image](https://user-images.githubusercontent.com/97077110/148885166-f72a1697-3ef5-4691-bafe-1336dbcd0d88.png)  
+# Ettercap:  
+## Installation:  
+``` Sudo apt-get install ettercap-common```  
+![image](https://user-images.githubusercontent.com/97077110/148885495-9d4eb8c0-0f77-47ab-8abc-784b032fea4e.png)  
+Running Ethecap software use command ```ettercap -G```  
+![image](https://user-images.githubusercontent.com/97077110/148885707-d7a1853c-af4c-45f6-a7cf-f06db0399231.png)  
+This is the Ettercap gui interface:  
+![image](https://user-images.githubusercontent.com/97077110/148885937-a9e2ae37-4f94-4d80-87ff-36d6b442b29b.png)  
+Click on the lookup button to start unified sniffing  
+![image](https://user-images.githubusercontent.com/97077110/148886145-e489d4af-c084-4346-988f-17c079bfbc65.png)  
+Scan the host by clicking on the icon  
+![image](https://user-images.githubusercontent.com/97077110/148886171-abce0b61-9d5b-4a2c-b53e-99f8fe1a917a.png)  
+![image](https://user-images.githubusercontent.com/97077110/148886196-2dc8fb7b-02d3-4209-b881-f10b66b51cb4.png)  
+![image](https://user-images.githubusercontent.com/97077110/148886215-7423f2eb-aedc-4782-b3ec-ab25124f29a2.png)  
+![image](https://user-images.githubusercontent.com/97077110/148886240-3617d338-2a94-4bca-8376-14a3d1cb702e.png)  
+![image](https://user-images.githubusercontent.com/97077110/148886264-98b75905-957b-4399-b656-8ffd6773309c.png)  
+![image](https://user-images.githubusercontent.com/97077110/148886289-f5dce947-efda-446a-89c7-ca150cb26d71.png)  
+# Red Python Wifi Ddos attack:  
+# Low orbit ion cannon:  
+## Installation  
+### Step 1: Download LOIC software on google, use the Sourceforge link to download the software  
+![image](https://user-images.githubusercontent.com/97077110/148886414-3366e23f-1018-4874-8fdf-cbb5157e0050.png)  
+![image](https://user-images.githubusercontent.com/97077110/148886444-317ac4c7-fc1c-4d12-ac8a-a3c5571908f6.png)  
+### Step 2: Save File into Downloads directory  
+![image](https://user-images.githubusercontent.com/97077110/148886476-2eb3ce0d-4b32-499d-b96c-54c5aa992b5e.png)  
+### Step 3: Extract the file out  
+![image](https://user-images.githubusercontent.com/97077110/148886535-3881bfa4-0177-4fe8-adfe-8df23ee09331.png)  
+### Step 4: 
+Install the mono tool to help us use the executable software by using command ```sudo apt install mono-complete```  
+![image](https://user-images.githubusercontent.com/97077110/148886720-8a9ec717-f3aa-4821-b650-a7b498585457.png)  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
