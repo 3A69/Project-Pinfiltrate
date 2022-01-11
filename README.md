@@ -5,7 +5,7 @@ IOT device capable of performing work reconnaissance in a plug and play usage
 Download the kali image from kali.org. Ensure that the download is from the ARM section as shown below. Do make sure that the correct version is chosen. In this case, the first option is used.  
 ![image](https://user-images.githubusercontent.com/97077110/148011185-c190b42a-90aa-4d15-bba8-10e33dcc2072.png)  
 ### Step 2  
-Install raspberry pi imager from https://www.raspberrypi.com/software/. This will allow you to flash kali into the SD card for the raspberry pi to boot. After downloading the software, proceed to run the raspberry pi imager. 
+Install raspberry pi imager from https://www.raspberrypi.com/software/. This will allow you to flash kali into the SD card for the raspberry pi to boot. After downloading the software, proceed to run the raspberry pi imager.   
 ![image](https://user-images.githubusercontent.com/97077110/148011274-6f40d8f2-cf6d-4c12-92b8-b21ea1df0d95.png)  
 ### Step 4  
 Select the kali OS downloaded online and choose to install it onto the SD card. Next click write. This process should take 15 minutes.   
@@ -68,7 +68,7 @@ print("-c       (6)     Attempt to crack password")
 Because the original script does not have aircrack capabilities we have appented this code into the script to enhance its capabilities.  
 
 We have also added sequence numbers to the script so that users are able to know which sequences come first.  
-![image](https://user-images.githubusercontent.com/97077110/148357955-6c77bf3e-eacb-4549-9802-cdcb58103ed7.png)  
+![image](https://user-images.githubusercontent.com/97077110/148357955-6c77bf3e-eacb-4549-9802-cdcb58103ed7.png)   
  
 ## Using of the Automation script:  
 
@@ -85,7 +85,7 @@ We shall switch the interface from managed mode to monitor mode.Run the command 
 We will detect all the networks around us to find a potential target by running the command ```$  python automation.py -m``` 
 ### Step 5  
 Monitor a network (Target's network) by using the command ```$  python automation.py -mc```
-![image](https://user-images.githubusercontent.com/97077110/148358676-0ef954cb-d576-47f9-8c6d-7163e8515e59.png)  
+![image](https://user-images.githubusercontent.com/97077110/148358676-0ef954cb-d576-47f9-8c6d-7163e8515e59.png)   
 ### Step 6
 Run the command ```automation.py -d```.  
 The channel can be found in step 3 under **CH**.  
@@ -95,7 +95,7 @@ Now, we will try to capture traffic from that wireless device, we have to wait u
 ### Step 7:  
 Run the command ```automation.py -c  ```.  
 Enter the wireshark file name that you have save   
-![image](https://user-images.githubusercontent.com/97077110/148503822-088080df-59bf-4966-a840-efebef3a563e.png)
+![image](https://user-images.githubusercontent.com/97077110/148503822-088080df-59bf-4966-a840-efebef3a563e.png)  
 
 
 # Zerotier Vpn 
@@ -195,7 +195,7 @@ FinalRecon screenshot:
 
 
 # StormBreaker  
-![image](https://user-images.githubusercontent.com/97077110/148505490-62e933a2-4809-4a5f-b4b1-ced4ca922be7.png)
+![image](https://user-images.githubusercontent.com/97077110/148505490-62e933a2-4809-4a5f-b4b1-ced4ca922be7.png)  
 
 To install stormbreaker use command git clone https://github.com/ultrasecurity/Storm-Breaker.git  
 
@@ -206,20 +206,20 @@ On linux terminal, Use commands.
 ```cd Storm-Breaker```  
 ```sudo bash install.sh```  
   ![image](https://user-images.githubusercontent.com/97077110/148505656-3192afc8-f267-45bc-832d-bd86d02b2651.png)  
- ![image](https://user-images.githubusercontent.com/97077110/148505781-6b58edfd-a194-44ed-bc03-908436caf218.png)
+ ![image](https://user-images.githubusercontent.com/97077110/148505781-6b58edfd-a194-44ed-bc03-908436caf218.png)  
 
 
 
 ### Step 2  
 Create a ngrok account for public url hosting.  
-![image](https://user-images.githubusercontent.com/97077110/148505889-ff90b637-b977-426e-8fc6-875c297d1303.png)
-![image](https://user-images.githubusercontent.com/97077110/148505959-fdfc8ef8-38b3-4d46-b441-132ba5ec411b.png)
+![image](https://user-images.githubusercontent.com/97077110/148505889-ff90b637-b977-426e-8fc6-875c297d1303.png)  
+![image](https://user-images.githubusercontent.com/97077110/148505959-fdfc8ef8-38b3-4d46-b441-132ba5ec411b.png)  
 
   
 ### Step 3  
 Append the authtoken into ngrok in kali using command sudo ngrok authtoken (your token number).  
 ```sudo ngrok authtoken (your token number)```  
-![image](https://user-images.githubusercontent.com/97077110/148506008-49eb7a3d-fea4-4d97-9ba7-6b37016b1ad8.png)
+![image](https://user-images.githubusercontent.com/97077110/148506008-49eb7a3d-fea4-4d97-9ba7-6b37016b1ad8.png)  
   
 ### Using StormBreaker  
 ### Step 1  
@@ -234,23 +234,23 @@ We are attempting to get the location of the target.
 ### Step 3  
 Choose template :nearyou.  
 ```[STORM-BREAKER@HOME/GET-LOC/SELECT-TEMPLATE]:$ 1```  
-![image](https://user-images.githubusercontent.com/97077110/148506323-24dd5d64-8004-4c7f-94b2-445868c5c20e.png)
+![image](https://user-images.githubusercontent.com/97077110/148506323-24dd5d64-8004-4c7f-94b2-445868c5c20e.png)  
 
 Copy the link and send to the target.  
 
 Once the Target opens the link , he/she will be prompted to enable location, once the target enables the location, it will immediately send it back to the host machine.  
 
-![image](https://user-images.githubusercontent.com/97077110/148506354-06429a3b-35ba-4844-abdf-67edfd3f1943.png)
+![image](https://user-images.githubusercontent.com/97077110/148506354-06429a3b-35ba-4844-abdf-67edfd3f1943.png)  
 
 ### Target side  
 The target will see this on his/her phone.
 The Target will be prompt to on his/her location adn the location will be send to the attacker.  
 
-![image](https://user-images.githubusercontent.com/97077110/148506539-51c2506c-a9fb-41a0-968e-b746419e08ce.png)
+![image](https://user-images.githubusercontent.com/97077110/148506539-51c2506c-a9fb-41a0-968e-b746419e08ce.png)  
 
 
 The tool will provide the exact location using google map.   
-![image](https://user-images.githubusercontent.com/97077110/148506581-d35cd297-9914-413b-b80e-b219597aae86.png)
+![image](https://user-images.githubusercontent.com/97077110/148506581-d35cd297-9914-413b-b80e-b219597aae86.png)  
 
 
 ## Blackeye:  
@@ -260,7 +260,7 @@ The tool will provide the exact location using google map.
 
 ### Installation:
 ```$ sudo git clone https://github.com/An0nUD4Y /blackeye.git```  
-![image](https://user-images.githubusercontent.com/97077110/148507953-1869121b-5a5c-4ea0-a30c-8f745e53ecf0.png)  
+![image](https://user-images.githubusercontent.com/97077110/148507953-1869121b-5a5c-4ea0-a30c-8f745e53ecf0.png)   
 
 
 We need to edit certain values of the file as there are functions that do not work with the new version of kali. Therefore the author recommends the user to change the code.   
@@ -268,9 +268,9 @@ We need to edit certain values of the file as there are functions that do not wo
 At line 436 change to:    
 ```link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")```
 
-![image](https://user-images.githubusercontent.com/97077110/148508086-f981dfb1-1d2f-4a9b-8297-fa9f54b7f35e.png)
+![image](https://user-images.githubusercontent.com/97077110/148508086-f981dfb1-1d2f-4a9b-8297-fa9f54b7f35e.png)  
 
-![image](https://user-images.githubusercontent.com/97077110/148508147-d51bf81f-afe7-4bd1-aea1-1bf80f2bcd9e.png)
+![image](https://user-images.githubusercontent.com/97077110/148508147-d51bf81f-afe7-4bd1-aea1-1bf80f2bcd9e.png)  
 
 
 
@@ -294,7 +294,7 @@ The target will see this , when he or she click into the link.
 Search Social engineering toolkit on kali    
 
 
-![image](https://user-images.githubusercontent.com/97077110/148537649-316ffc26-2ab9-425d-aa3e-23a8dc297b54.png)
+![image](https://user-images.githubusercontent.com/97077110/148537649-316ffc26-2ab9-425d-aa3e-23a8dc297b54.png)  
 
 
 
@@ -302,14 +302,14 @@ Search Social engineering toolkit on kali
 
 Select option Social-Engineering Attacks
 ``` Set > 1```  
-![image](https://user-images.githubusercontent.com/97077110/148537728-aa435ce9-c1f7-4f83-a34c-05bf7c334e27.png)
+![image](https://user-images.githubusercontent.com/97077110/148537728-aa435ce9-c1f7-4f83-a34c-05bf7c334e27.png)  
 
 
 
 ### Step 3:
 Then select  Mass Mailer attack  
 ```Set > 5```  
-![image](https://user-images.githubusercontent.com/97077110/148537775-5be45f49-a403-46da-b150-4f3a616f4f99.png)
+![image](https://user-images.githubusercontent.com/97077110/148537775-5be45f49-a403-46da-b150-4f3a616f4f99.png)  
 
 
 
@@ -317,7 +317,7 @@ Then select  Mass Mailer attack
 ### Step 4:
 Then choose 1. E-mail Attack Single Email address(spear phishing)  
 
-![image](https://user-images.githubusercontent.com/97077110/148537842-0c8eec64-73fe-4edb-9a8a-db6c7cc813f8.png)
+![image](https://user-images.githubusercontent.com/97077110/148537842-0c8eec64-73fe-4edb-9a8a-db6c7cc813f8.png)  
 
 
 
@@ -327,34 +327,34 @@ Enter your email
 Enter the name the target will see  
 Enter your email password   
 
-![image](https://user-images.githubusercontent.com/97077110/148537979-165642b5-2cd6-44b0-9a1b-bef752926c5f.png)
+![image](https://user-images.githubusercontent.com/97077110/148537979-165642b5-2cd6-44b0-9a1b-bef752926c5f.png)  
 
 
 Select and customize the email and enter the suspicious link.   
 
-![image](https://user-images.githubusercontent.com/97077110/148538000-2a25e7ec-f4af-4c1e-9262-6b031c983135.png)
+![image](https://user-images.githubusercontent.com/97077110/148538000-2a25e7ec-f4af-4c1e-9262-6b031c983135.png)  
 
 
 
 ### Target side :  
 
-![image](https://user-images.githubusercontent.com/97077110/148538039-1d4a7b75-a10b-4cf5-bc6f-f157033fb82f.png)
+![image](https://user-images.githubusercontent.com/97077110/148538039-1d4a7b75-a10b-4cf5-bc6f-f157033fb82f.png)  
 
 
 
 ### Troubleshooting:  
 There is a connection blocked by gmail as there is a safety feature that don't allow external application to access the email.  
-![image](https://user-images.githubusercontent.com/97077110/148538157-1ba2eab5-fdb2-478a-b6f4-b0e25863ad56.png)
+![image](https://user-images.githubusercontent.com/97077110/148538157-1ba2eab5-fdb2-478a-b6f4-b0e25863ad56.png)  
 
 
 We need to Turn off Less secure app access.  
 
-![image](https://user-images.githubusercontent.com/97077110/148538192-927afed2-367a-416c-aaee-30c597250e96.png)
+![image](https://user-images.githubusercontent.com/97077110/148538192-927afed2-367a-416c-aaee-30c597250e96.png)  
 
 
 
 ## Nmap(Network mapper)  
-![image](https://user-images.githubusercontent.com/97077110/148538577-435bcdd1-7511-4750-913e-6b3193e41897.png)
+![image](https://user-images.githubusercontent.com/97077110/148538577-435bcdd1-7511-4750-913e-6b3193e41897.png)  
 
 
 Nmap is the most widely used open source program for scanning hosts and services on a network The sophisticated features of Nmap can detect many applications that operate on systems, as well as services such as the
@@ -388,12 +388,7 @@ Tcpdump is a packet analyzer that runs from the command line. TCP/IP and other p
 
 ### Setup TcpDump:  
 ``sudo apt-get install tcpdump```  
-![image](https://user-images.githubusercontent.com/97077110/148543181-aec55008-fa02-4a00-99b8-053e773aeed2.png)
-
-## Using TcpDump:  
-![image](https://user-images.githubusercontent.com/97077110/148545086-94b6315e-07e3-4e02-9ad3-6f68f3b4bd3d.png)   
-
-Tcpdump is a packet analyzer that runs from the command line. TCP/IP and other packets that are transmitted through the network and seen by the system can be intercepted and displayed by using tcpdump. However the Raspberry Pi must be connected to the network to do so.  
+![image](https://user-images.githubusercontent.com/97077110/148543181-aec55008-fa02-4a00-99b8-053e773aeed2.png)  
 
 ```sudo tcpdump```  
 ![image](https://user-images.githubusercontent.com/97077110/148543279-37c47c72-785d-4010-a36a-11d5365cd9f4.png)  
@@ -402,13 +397,13 @@ Tcpdump is a packet analyzer that runs from the command line. TCP/IP and other p
 ![image](https://user-images.githubusercontent.com/97077110/148543863-eee19f3f-1fa9-44b7-9e0d-f0f7fe3970f6.png)  
 
 ```sudo tcpdump -i any -w fyp.pcap``` :capture all connection from any interface and write to fyp.pcap file
-![image](https://user-images.githubusercontent.com/97077110/148544451-d9a9459d-647b-4c92-8179-1d521c9af03b.png)
+![image](https://user-images.githubusercontent.com/97077110/148544451-d9a9459d-647b-4c92-8179-1d521c9af03b.png)  
 
 
 ## Proxychain tor:  
 Proxychains is a UNIX application that allows us to mask our legitimate IP address by redirecting network traffic. It routes our TCP traffic through a variety of proxies, including TOR, SOCKS4, SOCKS5, and HTTP (S). Proxychain can be used alongside with tools and application such as nmap to mask the true ip address of our host machine.    
 
-![image](https://user-images.githubusercontent.com/97077110/148881122-7ec89a23-a4d7-4364-a796-01540e30b3ae.png)
+![image](https://user-images.githubusercontent.com/97077110/148881122-7ec89a23-a4d7-4364-a796-01540e30b3ae.png)  
 
 Installation and setup of Proxychain:  
 
@@ -420,12 +415,12 @@ Step 1:
 
 Step 2:  
 ```Sudo nano /etc/proxychains.conf```  
-![image](https://user-images.githubusercontent.com/97077110/148881238-9083998b-cd1c-489f-8b2a-955989efef81.png)
+![image](https://user-images.githubusercontent.com/97077110/148881238-9083998b-cd1c-489f-8b2a-955989efef81.png)  
 
 Step 3:  
 ```nano /etc/proxychains.conf```  
 Delete # at dynamic_chain  
-![image](https://user-images.githubusercontent.com/97077110/148881388-163894fc-6192-4fa2-acf4-63874f9abe8c.png)
+![image](https://user-images.githubusercontent.com/97077110/148881388-163894fc-6192-4fa2-acf4-63874f9abe8c.png)  
 
 Step 4:
 ```sudo systemctl enable tor.service``` 
@@ -450,7 +445,7 @@ Recon-ng is a full featured reconnaissance framework that aims to provide a powe
 
 Installation:  
 ```Sudo git clone https://github.com/lanmaster53/recon-ng.git```  
-![image](https://user-images.githubusercontent.com/97077110/148882758-4d216ff2-e589-4dd4-879a-c3a4c7761515.png)
+![image](https://user-images.githubusercontent.com/97077110/148882758-4d216ff2-e589-4dd4-879a-c3a4c7761515.png)  
 
 
 
