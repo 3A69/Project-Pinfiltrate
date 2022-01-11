@@ -382,6 +382,10 @@ Nmap can be used to scan local networks.There are many commands that we can use 
 ```nmap –O 172.168.1.1```: This scan shows the operating system   
 
 ## TcpDump
+![image](https://user-images.githubusercontent.com/97077110/148880621-d0dbb0d5-9c09-450c-89f0-5c14be9cda77.png)  
+
+Tcpdump is a packet analyzer that runs from the command line. TCP/IP and other packets that are transmitted through the network and seen by the system can be intercepted and displayed by using tcpdump. However the Raspberry Pi must be connected to the network to do so.  
+
 ### Setup TcpDump:  
 ``sudo apt-get install tcpdump```  
 ![image](https://user-images.githubusercontent.com/97077110/148543181-aec55008-fa02-4a00-99b8-053e773aeed2.png)
@@ -399,6 +403,60 @@ Tcpdump is a packet analyzer that runs from the command line. TCP/IP and other p
 
 ```sudo tcpdump -i any -w fyp.pcap``` :capture all connection from any interface and write to fyp.pcap file
 ![image](https://user-images.githubusercontent.com/97077110/148544451-d9a9459d-647b-4c92-8179-1d521c9af03b.png)
+
+
+## Proxychain tor:  
+Proxychains is a UNIX application that allows us to mask our legitimate IP address by redirecting network traffic. It routes our TCP traffic through a variety of proxies, including TOR, SOCKS4, SOCKS5, and HTTP (S). Proxychain can be used alongside with tools and application such as nmap to mask the true ip address of our host machine.    
+
+![image](https://user-images.githubusercontent.com/97077110/148881122-7ec89a23-a4d7-4364-a796-01540e30b3ae.png)
+
+Installation and setup of Proxychain:  
+
+Step 1:  
+
+```$ sudo apt-get install proxychains  tor```
+![image](https://user-images.githubusercontent.com/97077110/148881168-b78b4c58-f39c-44c4-a5e3-c926bdacd7f9.png)  
+
+
+Step 2:  
+```Sudo nano /etc/proxychains.conf```  
+![image](https://user-images.githubusercontent.com/97077110/148881238-9083998b-cd1c-489f-8b2a-955989efef81.png)
+
+Step 3:  
+```nano /etc/proxychains.conf```  
+Delete # at dynamic_chain  
+![image](https://user-images.githubusercontent.com/97077110/148881388-163894fc-6192-4fa2-acf4-63874f9abe8c.png)
+
+Step 4:
+```sudo systemctl enable tor.service``` 
+
+![image](https://user-images.githubusercontent.com/97077110/148881455-e4d091d4-0997-4e3e-ae1d-6bca4ef77cfd.png)  
+
+### Using of Proxychain:  
+```Proxychains firefox google.com ```
+![image](https://user-images.githubusercontent.com/97077110/148881485-d9473769-1d43-4d9a-bb42-dd8a4f9344a8.png)  
+
+From here it show that when we use firefox.exe, our location is in United Kingdom, not in Singapore.  
+
+![image](https://user-images.githubusercontent.com/97077110/148881496-1ce3b2ec-6be3-4990-8eae-f4a994aec93a.png)  
+
+Proxychain NMAP:    
+
+
+
+### Recon-ng gather information(can someone help me research more like wat other marketplace install)
+
+Recon-ng is a full featured reconnaissance framework that aims to provide a powerful environment for doing open source web-based reconnaissance rapidly and thoroughly.  
+
+Installation:  
+```Sudo git clone https://github.com/lanmaster53/recon-ng.git```  
+![image](https://user-images.githubusercontent.com/97077110/148882758-4d216ff2-e589-4dd4-879a-c3a4c7761515.png)
+
+
+
+
+
+
 
 
 
