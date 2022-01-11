@@ -159,7 +159,7 @@ sudo bash setup.sh
 ![image](https://user-images.githubusercontent.com/97077110/148496107-f197f915-667b-435f-b1c4-083299940bd4.png)  
 Keep settings default, **Select enter and yes**  
 ![image](https://user-images.githubusercontent.com/97077110/148496172-b5e27e9f-25fc-442e-936c-21b91890ba80.png)  
-## To run the tool  
+## Running of the tool  
 Use commands  
 ```  
 cd TheFatRat
