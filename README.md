@@ -502,7 +502,7 @@ Options set SOURCE facebook.com
 ![image](https://user-images.githubusercontent.com/97077110/148885136-d54b030d-119e-4bde-a550-d7b384bd3b70.png)  
 ![image](https://user-images.githubusercontent.com/97077110/148885166-f72a1697-3ef5-4691-bafe-1336dbcd0d88.png)  
 # Ettercap:  
-## Installation:  
+## Installation of Ettercap:  
 ``` Sudo apt-get install ettercap-common```  
 ![image](https://user-images.githubusercontent.com/97077110/148885495-9d4eb8c0-0f77-47ab-8abc-784b032fea4e.png)  
 Running Ethecap software use command ```ettercap -G```  
@@ -520,7 +520,7 @@ Scan the host by clicking on the icon
 ![image](https://user-images.githubusercontent.com/97077110/148886289-f5dce947-efda-446a-89c7-ca150cb26d71.png)  
 # Red Python Wifi Ddos attack:  
 # Low orbit ion cannon:  
-## Installation  
+## Installation of Low orbit ion cannon:   
 ### Step 1: 
 Download LOIC software on google, use the Sourceforge link to download the software  
 ![image](https://user-images.githubusercontent.com/97077110/148886414-3366e23f-1018-4874-8fdf-cbb5157e0050.png)  
@@ -540,7 +540,7 @@ use command ```mono LOIC.exe```
 ![image](https://user-images.githubusercontent.com/97077110/148887661-5ac9ba8c-eca3-4689-839a-4c98fa2afe0a.png)  
 # Driftnet  
 # Tshark  
-## Installation:  
+## Installation of Tshark:  
 use command ```sudo apt-get install tshark```  
 Using of tshark:  
 ```
