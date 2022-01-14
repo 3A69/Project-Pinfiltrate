@@ -44,12 +44,15 @@
   - [Installation of Maskphish](#installation-of-maskphish)
 - [Impulse](#impulse)
   - [Installation of Impulse](#installation-of-impulse)
-  - [using the impulse tool for email](#using-the-impulse-tool-for-email)
+  - [using the impulse tool for email](#using-the-impulse-tool-for-email)  
+- [Log4J vulnerability](#log4j-vulnerability)  
+  - [Installation of Log4J vulnerability](#installation-of-log4j-vulnerability)  
+- [VLC msfconsole](#vlc-msfconsole)
+- [Netcat Reverse shell connection](#netcat-reverse-shell-connection)    
+  - [FYP.ps1](#fyp.ps1) 
+  - [FYP.bat](#fyp.bat)   
+  - [FYP.vbs](#fyp.vbs)  
    
-   
- 
-
-
 # Project-Pinfiltrate
 IOT device capable of performing work reconnaissance in a plug and play usage 
 # Flashing Kali to SD Card    
@@ -562,8 +565,7 @@ Install the mono tool to help us use the executable software by using command ``
 # LOIC  
 use command ```mono LOIC.exe```  
 ![image](https://user-images.githubusercontent.com/97077110/148887634-1d4f253e-4a37-4d08-a605-501d33ba6cbe.png)  
-![image](https://user-images.githubusercontent.com/97077110/148887661-5ac9ba8c-eca3-4689-839a-4c98fa2afe0a.png)  
-# Driftnet  
+![image](https://user-images.githubusercontent.com/97077110/148887661-5ac9ba8c-eca3-4689-839a-4c98fa2afe0a.png)    
 # Tshark  
 ## Installation:  
 use command ```sudo apt-get install tshark```  
@@ -619,7 +621,7 @@ target side:
 ![image](https://user-images.githubusercontent.com/97077110/148902152-b2f30ca3-86d8-4c87-b7e5-43e9017d56ae.png)  
  
 # Log4J vulnerability :
-## Installation :  
+## Installation of Log4J :  
 
 ```git clone https://github.com/kozmer/log4j-shell-poc```
 
