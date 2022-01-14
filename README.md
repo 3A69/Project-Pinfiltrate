@@ -16,10 +16,7 @@
   - [Setting up StormBreaker](#setting-up-stormbreaker)
   - [Execution of StormBreaker](#execution-of-stormbreaker)
   - [Target side of StormBreaker](#target-side-of-stormbreaker)
- - [Blackeye](#blackeye)
-   - [Installation of Blackeye](#installation-of-blackeye)
-   - [Execution of Blackeye](#execution-of-blackeye)
-   - [Credential found](#credential-found)
+
  - [Social engineering tool](#social-engineering-tool)
    - [Target side of Social engineering tool](#target-side-of-social-engineering-tool)
    - [troubleshooting](#troubleshooting)  
