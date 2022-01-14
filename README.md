@@ -23,7 +23,7 @@
  - [Social engineering tool](#social-engineering-tool)
    - [Target side pf Social engineering tool](#target-side-of-social-engineering-tool)
    - [troubleshooting](#troubleshooting)
- - [Nmap(networkmapper)](#Nmap(network mapper)) 
+ - [Nmap](#Nmap) 
  - [TcpDump](#tcpdump)
   - [Setup TcpDump](#setup-tcpdump)
   - [proxychain tor](#proxychain-tor)
@@ -41,7 +41,7 @@
 - [Macchanger](#macchanger)
   - [Installation of Macchanger](#installation-of-Macchanger)
 - [Maskphish](#maskphish)
-  - [Installation of Maskphish(#installation-of-maskphish)
+  - [Installation of Maskphish](#installation-of-maskphish)
 - [Impulse](#impulse)
   - [Installation of Impulse](#installation-of-impulse)
   - [using the impulse tool for email](#using-the-impulse-tool-for-email)
@@ -584,7 +584,7 @@ Before Mac Changer:
 use command ```macchanger -l``` to list the mac address of the different vendor and devices  
 ![image](https://user-images.githubusercontent.com/97077110/148890376-a60085cd-2b02-4b61-b734-cfa68494e617.png)  
 # Maskphish  
-## Installation:  
+## Installation of Maskphish:  
 ### step 1:
 use command ```sudo git clone https://github.com/jaykali/maskphish.git1```  
 ![image](https://user-images.githubusercontent.com/97077110/148890516-2c2cbece-2a13-4463-bfff-8825a5601e90.png)  
@@ -599,7 +599,7 @@ sudo chmod +x maskphish.sh
 ![image](https://user-images.githubusercontent.com/97077110/148892352-2590fbc4-0280-4808-acd6-b5acaa6817fd.png)  
 
 # Impulse tool:  
-## Installation:  
+## Installation of Impulse:  
 ### Step 1:  
 git clone https://github.com/LimerBoy/Impulse  
 ![image](https://user-images.githubusercontent.com/97077110/148892475-2cec9aa2-dce6-4dda-98cf-e09f634cc1a1.png)  
@@ -617,9 +617,7 @@ use command ```python3 impulse.py --method email --threads 2 --target (target em
 ![image](https://user-images.githubusercontent.com/97077110/148902077-ee711ccf-93c4-415a-8b1e-2c6ffac6ed80.png)   
 target side:  
 ![image](https://user-images.githubusercontent.com/97077110/148902152-b2f30ca3-86d8-4c87-b7e5-43e9017d56ae.png)  
-# VLC msfconsole:  
-
-
+ 
 # Log4J vulnerability :
 ## Installation :  
 
