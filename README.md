@@ -21,7 +21,7 @@
    - [Execution of Blackeye](#execution-of-blackeye)
    - [Credential found](#credential-found)
  - [Social engineering tool](#social-engineering-tool)
-   - [Target side pf Social engineering tool](#target-side-of-social-engineering-tool)
+   - [Target side of Social engineering tool](#target-side-of-social-engineering-tool)
    - [troubleshooting](#troubleshooting)
  - [Nmap](#Nmap) 
  - [TcpDump](#tcpdump)
@@ -45,8 +45,8 @@
 - [Impulse](#impulse)
   - [Installation of Impulse](#installation-of-impulse)
   - [using the impulse tool for email](#using-the-impulse-tool-for-email)  
-- [Log4J vulnerability](#log4j-vulnerability)  
-  - [Installation of Log4J vulnerability](#installation-of-log4j-vulnerability)  
+- [Log4J](#log4j)  
+  - [Installation of Log4J](#installation-of-log4j)  
 - [VLC msfconsole](#vlc-msfconsole)
 - [Netcat Reverse shell connection](#netcat-reverse-shell-connection)    
   - [FYP.ps1](#fyp.ps1) 
@@ -530,7 +530,7 @@ Options set SOURCE facebook.com
 ![image](https://user-images.githubusercontent.com/97077110/148885136-d54b030d-119e-4bde-a550-d7b384bd3b70.png)  
 ![image](https://user-images.githubusercontent.com/97077110/148885166-f72a1697-3ef5-4691-bafe-1336dbcd0d88.png)  
 # Ettercap:  
-## Installation:  
+## Installation of Ettercap:  
 ``` Sudo apt-get install ettercap-common```  
 ![image](https://user-images.githubusercontent.com/97077110/148885495-9d4eb8c0-0f77-47ab-8abc-784b032fea4e.png)  
 Running Ethecap software use command ```ettercap -G```  
@@ -548,7 +548,7 @@ Scan the host by clicking on the icon
 ![image](https://user-images.githubusercontent.com/97077110/148886289-f5dce947-efda-446a-89c7-ca150cb26d71.png)  
 # Red Python Wifi Ddos attack:  
 # Low orbit ion cannon:  
-## Installation  
+## Installation of Low orbit ion cannon 
 ### Step 1: 
 Download LOIC software on google, use the Sourceforge link to download the software  
 ![image](https://user-images.githubusercontent.com/97077110/148886414-3366e23f-1018-4874-8fdf-cbb5157e0050.png)  
@@ -567,7 +567,7 @@ use command ```mono LOIC.exe```
 ![image](https://user-images.githubusercontent.com/97077110/148887634-1d4f253e-4a37-4d08-a605-501d33ba6cbe.png)  
 ![image](https://user-images.githubusercontent.com/97077110/148887661-5ac9ba8c-eca3-4689-839a-4c98fa2afe0a.png)    
 # Tshark  
-## Installation:  
+## Installation of Tshark:  
 use command ```sudo apt-get install tshark```  
 Using of tshark:  
 ```
@@ -575,6 +575,7 @@ tshark [ -i <capture interface>|- ] [ -f <capture filter> ] [ -2 ] [ -r <infile>
 ```
 ![image](https://user-images.githubusercontent.com/97077110/148888944-45b496a7-c02b-416a-957e-83e83fecf20e.png  
 # Macchanger  
+## Installation of Macchanger
 use command ```sudo apt-get install macchanger```   
 ![image](https://user-images.githubusercontent.com/97077110/148889187-28a50616-51dc-47ac-9a80-486338ac4705.png)  
 Before Mac Changer:  
@@ -620,7 +621,7 @@ use command ```python3 impulse.py --method email --threads 2 --target (target em
 target side:  
 ![image](https://user-images.githubusercontent.com/97077110/148902152-b2f30ca3-86d8-4c87-b7e5-43e9017d56ae.png)  
  
-# Log4J vulnerability :
+# Log4J :
 ## Installation of Log4J :  
 
 ```git clone https://github.com/kozmer/log4j-shell-poc```
