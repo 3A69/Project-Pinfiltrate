@@ -762,7 +762,8 @@ git clone https://github.com/hr-tech/zphiser
 Select Cloudflared option
 ![image](https://user-images.githubusercontent.com/97077110/149761568-45bdc0bd-f568-4401-b488-425209246866.png)
 
-
+Send the link to target:
+Together with maskphish , the link can be less suspicious to the target.
 ![image](https://user-images.githubusercontent.com/97077110/149761699-92aebd29-96ce-421a-ba20-d413425474fe.png)
 
 
