@@ -303,21 +303,7 @@ The Target will be prompt to on his/her location adn the location will be send t
 
 The tool will provide the exact location using google map.   
 ![image](https://user-images.githubusercontent.com/97077110/148506581-d35cd297-9914-413b-b80e-b219597aae86.png)  
-
-
-
-
-### Execution of StormBreaker:
-```$ sudo bash blackeye.sh```    
-``` Choose an option : 6```  
-![image](https://user-images.githubusercontent.com/97077110/148508266-60722c6b-82f6-4d78-933e-2acea804ee89.png)  
-
-The target will see this , when he or she click into the link.  
-![image](https://user-images.githubusercontent.com/97077110/148508408-c0c57fb3-3f2b-4c3a-a682-aff226803158.png)  
-
-
-### Credential found:  
-![image](https://user-images.githubusercontent.com/97077110/148508563-50dfe0b2-0da1-48e4-a4c0-6a5d425e806a.png)  
+  
 
 
 ## Social engineering tool   
@@ -762,9 +748,22 @@ We can clear the content of the file while retaining the item of itself:
 
 ## Zphiser:
 A phising tool that consists of websites template that we can use to phish crendential from target.   
-Installation:
+Installation:  
+git clone https://github.com/hr-tech/zphiser
 
 ![image](https://user-images.githubusercontent.com/97077110/149759958-e2110b7c-6646-47ba-ad62-681a9786d4c0.png)   
+
+```cd zphiser```   
+```chmod +x zphiser.sh```  
+```bash zphiser.sh```  
+![image](https://user-images.githubusercontent.com/97077110/149761036-c9d862fc-5472-41c9-b300-e3ccaed819bc.png)  
+![image](https://user-images.githubusercontent.com/97077110/149761086-b728070c-c39b-4052-915c-26e3e17dfef5.png)  
+
+Select Cloudflared option
+![image](https://user-images.githubusercontent.com/97077110/149761568-45bdc0bd-f568-4401-b488-425209246866.png)
+
+
+![image](https://user-images.githubusercontent.com/97077110/149761699-92aebd29-96ce-421a-ba20-d413425474fe.png)
 
 
 
