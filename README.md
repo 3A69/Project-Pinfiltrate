@@ -65,7 +65,7 @@ Select the kali OS downloaded online and choose to install it onto the SD card. 
 ### Step 5
 Insert the sd card into the raspberry pi and boot it up. It should turn on like a normal computer with Kali Linux OS.  
 
-Headless Setup:
+# Headless Setup:
 To create a headless setup, we must configure the kali to autologin and auto connect to wifi. To do this,  I looked for the config file that was incharge of network connections (/etc/network/interfaces). 
 Next, I edited the file to ensure kali auto connects to the network every time by adding the following.
 ```
@@ -91,6 +91,55 @@ auth required pam_succeed_if.so user != root quiet_success
 After a reboot, kali will now 
 	1. Auto Login without user input
 	2. Auto reconnect to a previously connected network wirelessly (Wi-Fi)
+	
+# Command and Control  
+Before infiltration and reconnaissance, we have to ensure that we are able to establish a connection with the pi remotely. Being able to do so allows the user to spawn a shell and interact with the pi and exfiltrate data out. This means that the pi has to bypass the firewall and establish a connection with the master computer from another network. This can be achieved by utilizing DNS service to evade firewall rules. We will be using dnscat2 developed by iagox64 on github. You may follow his installation guide or stick to ours.  
+## Setting up the command side with dnscat2  
+With dnscat2, your master computer MUST be running linux for this to work. This can be a bridged VM or a bare metal linux OS. In our walkthrough we proceeded with the VM as it allows us to revert back to snapshots easily whenever we need to.
+
+### Step 1 (OPTIONAL)  
+This step is only optional if you are not running linux on a VM.
+To get started, download any linux VM on your computer. We stuck with kali to keep things simple. Head over to their official website and download their latest VM.
+![image](https://user-images.githubusercontent.com/97077110/150625638-e09c1fb0-c679-455d-a8b5-f6245729622f.png)  
+Next, run it and follow through their installation process  
+Finally, run the VM on bridged network connection and ensure that it shares the same subnet as your host pc.
+### Step 2  
+Next, to setup DNScat2 on the master PC, key in the following commands  
+```
+$ sudo apt-get install ruby-dev
+
+$ git clone https://github.com/iagox86/dnscat2.git
+
+$ cd dnscat2/server/
+
+$ gem install bundler
+
+$ bundle install
+```
+### Step 3
+After running all the commands above flawlessly, this machine is now ready to be a master PC. to start the DNS server, run the following commands  
+```
+$ cd dnscat2/server
+
+$ sudo ruby ./dnscat2.rb
+```  
+The server should always be running before running the client (slave)
+## Setting up dnscat2 on the raspberry pi  
+After setting up the master, we move on to configuring the PI to send DNS packets to the master. To do so, ensure that the pi has internet connection.  
+Next, run the following commands  
+```
+$ git clone https://github.com/iagox86/dnscat2.git
+
+$ cd dnscat2/client/
+
+$ make
+
+```
+## Setting up port forwarding  
+In order for the traffic to reach the Master PC, we have to configure the router, a.k.a the C&C Server to forward packets to the master computer. Log into your router and navigate to port forwarding and ensure it is turned on. Since DNS operates on port 53, we will configure the router to listen for traffic coming from port 53. You may choose to specify a different port if you want to reduce traffic overhead. Next, specify the IP address of your master and ensure that it is a static ip address. Monitor for both UDP and TCP and save changes. 
+
+## Establishing a connection with dnscat2
+
 # Wireless security  
 An area of attack that the team decides to attack is targeting devices that use wireless connection. By using Raspberry PI and a Wifi adapter, we will be able to scan and discover potential networks and exploit these networks using the right tool. This section will cover tools that will be used to bypass wireless defenses and perform penetration testing.
 
