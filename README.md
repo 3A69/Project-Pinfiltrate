@@ -946,30 +946,6 @@ Reason why the end was /dev/sda1 was because I intended to erase that targeted d
 Kali Linux will hang and then a black screen will appear , showing that the disk has already been corrupted.  
 
 
-## Macchanger:  
-
-To perform  mac changer , users are required to install the program first. Key in ```sudo apt-get install macchanger``` to get mac changer installed in Kali Linux.     
-
-Command: sudo apt-get install macchanger    
-![image](https://user-images.githubusercontent.com/97077110/150922338-2727a685-2a6d-4cdc-805d-baf8ed97e186.png)  
-
-
-Below will show a screenshot of the current device physical address before Mac changer has taken place.  
-Before Mac Changer:  
-![image](https://user-images.githubusercontent.com/97077110/150922376-c58b5241-c909-48a8-b950-a624a3185edc.png)  
-
-
-
-But firstly, remember to turn the interface down, which in this case is eth0.The macchanger will only work if the interface is turned down.After interface has been turned down , type in the command “macchanger -r eth0” to perform the mac changing process. As you can see , after applying mac changer , the mac address of the device has been altered to something else, instead of the old one.   
-
-After applying Mac Changer  
-![image](https://user-images.githubusercontent.com/97077110/150922651-c7c033d0-ce05-4863-a89e-954e2f153524.png)  
-
-
-
-Current New Mac address:  
-![image](https://user-images.githubusercontent.com/97077110/150922696-1424fcc1-b33d-43a2-bef3-308c2706c4b6.png)
-
 
 
 
