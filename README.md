@@ -953,6 +953,37 @@ Kali Linux will hang and then a black screen will appear , showing that the disk
 
 
 
+## Rpcclient  
+Rpcclient is a tool to perform tests on MS-RPC functionality in Samba, but for this instance, we will use it to gather information about domain controllers.  
+
+But to ensure that Rpcclient will work well, make sure your kali linux is able to ping the domain controller , and the domain controller is able to ping your kali linux.  
+
+Firstly, go to the terminal in Kali Linux. Type “Rpcclient -U (domain username) % ( password of domain account) followed by IP address of domain controller. This process is to login to the domain controller with a current user that is residing in the domain controller. Thus, this instance would be using Rpcclient to login to the domain with the account name joelsim , along with his password Smile@123  
+
+![image](https://user-images.githubusercontent.com/97077110/150925566-77ee531d-a5a5-4ee2-a6c7-8797357d890c.png)  
+
+Figure 0.
+
+Next, once you are in the Rpcclient , you are able to gather the DC info. For example , “srvinfo” gives you information about that DC. Hence , the image below will show you an example of various types of details we can get with “ srvinfo “.  
+![image](https://user-images.githubusercontent.com/97077110/150925643-70ae4bb2-bdd3-4037-99cc-e432cc1b644f.png)
+
+
+
+
+To find out all users in that DC , key in “ enumdomusers “ , and it will list down all users in that DC.  
+![image](https://user-images.githubusercontent.com/97077110/150925685-98b03702-4b05-4961-9063-67903413fcbc.png)
+
+
+
+To find a particular user’s detail in that DC , “ queryuser followed by (name of that user) “.  
+
+![image](https://user-images.githubusercontent.com/97077110/150925734-178b938e-5327-41d3-bf73-c694a447de67.png)
+
+
+
+
+
+
 
 
 
