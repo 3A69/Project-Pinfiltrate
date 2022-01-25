@@ -49,6 +49,9 @@
   - [FYP.ps1](#fyp.ps1) 
   - [FYP.bat](#fyp.bat)   
   - [FYP.vbs](#fyp.vbs)  
+- [Wiping logs](#Wiping-logs)  
+- [Macchanger](#Machanger)
+- [Remotely corrupting Kali linux](#Remotely-corrupting-Kali-linux)
    
 # Project-Pinfiltrate
 IOT device capable of performing work reconnaissance in a plug and play usage 
@@ -873,6 +876,100 @@ ziphisher can be ued together with maskphish to make the link less suspicious to
 ![image](https://user-images.githubusercontent.com/97077110/149761699-92aebd29-96ce-421a-ba20-d413425474fe.png)
 On the Target side:  
 ![image](https://user-images.githubusercontent.com/97077110/150919838-3e49f6ff-e43c-45d1-b4bd-922aba1f1765.png)
+
+
+
+
+## Wiping the logs  
+Firstly, the very initial step in ensuring that all logs would be cleared , would be by clearing the event logs from the system that you invaded. Fortunately for Windows systems , Kali Linux has a tool in Metasploit named “clearev”. Clearev helps to clear windows event logs automatically without the attacker manually doing it. As it would be very obvious if the event logs show zero logs , they could not be traced back to you as the logs containing intruded details and information are erased.  
+ 
+To perform Clearev, users would just need to head into Meterpreter. Once the user is inside the Meterpreter , just need to run it as no initial configuration or setup is required.   
+
+As shown in the image attached below, it shows that there are 15,403 events that are being recorded by the Windows Logs in Event Viewer.  
+
+With the help of Meterpreter , we use the command “clearev” to remove logs that are in the applications.  
+
+![image](https://user-images.githubusercontent.com/97077110/150921380-1c51854d-9558-4471-9d34-7409e6ccd819.png)  
+![image](https://user-images.githubusercontent.com/97077110/150921424-ba15aabd-4adc-44d9-ac15-5b2d75898231.png)  
+
+
+## Resetting the Raspberry Pi to factory settings    
+ 
+First method , Software Reset.  
+
+Firstly, ensure that parted is installed on your device. To confirm if its installed on your device, type “parted --version”.  
+
+If it is not installed , you can install it with the following commands.  
+```sudo apt update```   
+```sudo apt install parted```  
+
+Next, identify the SD card name with this command.
+```Lsblk```  
+
+Afterwards , the command will then list down a list of all available block devices.
+After identifying your device's name , key in the following commands.  
+
+This command is to create a partition table , and my device name is /dev/sdb , change accordingly to your device name. 
+
+```sudo parted /dev/sdb --script -- mklabel msdos```   
+
+Next , create a FAT32 partition that takes up the whole drive.  
+
+```sudo parted /dev/sdb --script -- mkpart primary fat32 1MiB 100%```  
+
+Afterwards, format the boot partition to FAT32.  
+
+```sudo mkfs.vfat -F32 /dev/sdb1```  
+
+That's it! All is done for software reformatting of SD card.   
+
+Next , it would be physically destroying the SD card. In this instance , remove the SD card from the Raspberry PI and cut it into many pieces would ensure that all data in the SD card is gone.     
+![image](https://user-images.githubusercontent.com/97077110/150921806-f49647e1-32e4-4fc2-8a50-531db425bda9.png)  
+
+## Remotely Corrupting Kali Linux  
+
+
+First locate the disk that you are going to corrupt with the command below. It is important to ensure the disk that you are removing is correct as deleting the wrong disk could also mean that your digital footprints are still alive in the Pi.  
+
+```sudo fdisk -l```  
+![image](https://user-images.githubusercontent.com/97077110/150922054-4bc1673c-20b1-4252-bc91-f08ba25f747b.png)   
+
+
+
+
+After locating the disk that you are gonna erase , key in “ sudo dd if=/dev/zero of=/dev/sda1 “.
+Reason why the end was /dev/sda1 was because I intended to erase that targeted disk , hence I key in /dev/sda1 at the end. Furthermore , this command was used because I am overwriting the bytes, making the data harder to recover.  
+
+![image](https://user-images.githubusercontent.com/97077110/150922147-5b51768a-b85c-41d5-acf0-26f4a97f8f08.png)  
+
+  
+Kali Linux will hang and then a black screen will appear , showing that the disk has already been corrupted.  
+
+
+## Macchanger:  
+
+To perform  mac changer , users are required to install the program first. Key in ```sudo apt-get install macchanger``` to get mac changer installed in Kali Linux.     
+
+Command: sudo apt-get install macchanger    
+![image](https://user-images.githubusercontent.com/97077110/150922338-2727a685-2a6d-4cdc-805d-baf8ed97e186.png)  
+
+
+Below will show a screenshot of the current device physical address before Mac changer has taken place.  
+Before Mac Changer:  
+![image](https://user-images.githubusercontent.com/97077110/150922376-c58b5241-c909-48a8-b950-a624a3185edc.png)  
+
+
+
+But firstly, remember to turn the interface down, which in this case is eth0.The macchanger will only work if the interface is turned down.After interface has been turned down , type in the command “macchanger -r eth0” to perform the mac changing process. As you can see , after applying mac changer , the mac address of the device has been altered to something else, instead of the old one.   
+
+After applying Mac Changer  
+![image](https://user-images.githubusercontent.com/97077110/150922651-c7c033d0-ce05-4863-a89e-954e2f153524.png)  
+
+
+
+Current New Mac address:  
+![image](https://user-images.githubusercontent.com/97077110/150922696-1424fcc1-b33d-43a2-bef3-308c2706c4b6.png)
+
 
 
 
