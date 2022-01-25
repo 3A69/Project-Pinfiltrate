@@ -30,6 +30,7 @@
   - [Using of whois_procs](#using-of-whois_procs)
 - [Ettercap](#ettercap)
   - [Installation of Ettercap](#installation-of-ettercap)
+  - [Arp Scan](#Arp-Scan)
 - [Low orbit ion cannon](#low-orbit-ion-cannon)
   - [Installation of Low orbit ion cannon](#installation-of-low-orbit-ion-cannon)
 - [LOIC](#loic)
@@ -50,7 +51,7 @@
   - [FYP.bat](#fyp.bat)   
   - [FYP.vbs](#fyp.vbs)  
 - [Wiping logs](#Wiping-logs)  
-- [Macchanger](#Machanger)
+- [Macchanger](#Macchanger)
 - [Remotely corrupting Kali linux](#Remotely-corrupting-Kali-linux)
    
 # Project-Pinfiltrate
@@ -520,6 +521,11 @@ On the target side, this is how it looks like where they should enter the creden
 After victim enter the credentials, this is how it will look like after it is successfully intercepted.  
 ![image](https://user-images.githubusercontent.com/97077110/150915470-e430dae4-075d-45cd-b5af-30b3ef6b05e4.png)  
 
+## Arp Scan:  
+Fast packet scanner tool that can detect active ip addresses in the subnet that is on the local network.  
+Command : ```sudo arp-scan -localnet```     
+![image](https://user-images.githubusercontent.com/97077110/150924394-8d4f8b9b-d621-4d62-bed9-9245d1a6d405.png)  
+
 # Netcat Reverse shell connection:  
 
 On the Attacker side :  
@@ -944,6 +950,7 @@ Reason why the end was /dev/sda1 was because I intended to erase that targeted d
 
   
 Kali Linux will hang and then a black screen will appear , showing that the disk has already been corrupted.  
+
 
 
 
