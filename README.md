@@ -767,7 +767,25 @@ use command ```python3 impulse.py --method email --threads 2 --target (target em
 ![image](https://user-images.githubusercontent.com/97077110/148902077-ee711ccf-93c4-415a-8b1e-2c6ffac6ed80.png)   
 Target side:  
 ![image](https://user-images.githubusercontent.com/97077110/148902152-b2f30ca3-86d8-4c87-b7e5-43e9017d56ae.png)  
- 
+
+# Create_ap
+## Installation of Create_ap  
+
+To install create_ap, run the following commands.  
+```
+sudo apt-get install haveged hostapd git util-linux procps iproute2 iw dnsmasq iptables bettercap
+git clone https://github.com/oblique/create_ap
+cd create_ap
+sudo make install
+cd .. && rm -rf create_ap 
+```  
+
+Ensure that the pi has one interface receiving connection and one separate interface to host the rogue ap. Type ‘ip a’ to figure out which interface will be used to host the ap. It is commonly a WLAN interface.  
+Next, type the command `sudo create_ap -m bridge eth0 wlan0 RogueAP`  
+
+This tells create_ap to establish a bridged connection and take the internet connection from eth0 and host the ap using wlan0. The screenshot below shows what it is like to get it running successfully.
+
+
 # Log4J :
 ## Installation of Log4J :  
 
