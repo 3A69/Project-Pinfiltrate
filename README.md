@@ -12,7 +12,7 @@
   - [configuration](#configuration)
   - [Payload file](#payload-file)
   - [Target side of TheFatRat](#target-side-of-thefatrat-tool)
-  - [FinalRecon](#FinalRecon)
+- [FinalRecon](#FinalRecon)
 - [StormBreaker](#stormbreaker)
   - [Setting up StormBreaker](#setting-up-stormbreaker)
   - [Execution of StormBreaker](#execution-of-stormbreaker)
