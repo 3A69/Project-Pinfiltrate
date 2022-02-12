@@ -12,6 +12,7 @@
   - [configuration](#configuration)
   - [Payload file](#payload-file)
   - [Target side of TheFatRat](#target-side-of-thefatrat-tool)
+  - [FinalRecon](#FinalRecon)
 - [StormBreaker](#stormbreaker)
   - [Setting up StormBreaker](#setting-up-stormbreaker)
   - [Execution of StormBreaker](#execution-of-stormbreaker)
@@ -311,8 +312,9 @@ cp filename.bat /var/www/html/(directoryname)
 ## Target side of TheFatRat tool:  
 Go to browser and go to the Host IP address 172.16.35.14/FYP/  
 ![image](https://user-images.githubusercontent.com/97077110/148496961-ed19ae58-ddf2-4109-8c61-85709c90c3c8.png)  
-Download the fyp.bat and run it on the target system.  
-FinalRecon screenshot:  
+Download the fyp.bat and run it on the target system.    
+
+# FinalRecon:  
 ![image](https://user-images.githubusercontent.com/97077110/148497186-f611528c-e547-4776-bb86-9cfbb140916a.png)  
 ![image](https://user-images.githubusercontent.com/97077110/148497210-c8392428-8308-477f-9f60-419f48e264f4.png)  
 ![image](https://user-images.githubusercontent.com/97077110/148497246-e58cf561-df5f-445a-bc18-20c07db60587.png)  
