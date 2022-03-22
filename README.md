@@ -56,7 +56,7 @@
 - [Remotely corrupting Kali linux](#Remotely-corrupting-Kali-linux)
    
 # Project-Pinfiltrate
-IOT device capable of performing work reconnaissance in a plug and play usage 
+IOT device capable of performing network reconnaissance in a plug and play usage 
 # Flashing Kali to SD Card    
 ### Step 1
 Download the kali image from kali.org. Ensure that the download is from the ARM section as shown below. Do make sure that the correct version is chosen. In this case, the first option is used.  
